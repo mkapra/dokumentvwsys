@@ -1,0 +1,15 @@
+<%= form_for(@document, :html => { multipart: true }) do |form| %>
+  <div class="field">
+    <%= form.label :delete_at %>
+    <%= form.date_select :delete_at, default: 2.weeks.from_now %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pdf %>
+    <%= form.file_field :pdf %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

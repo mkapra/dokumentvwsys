@@ -10,10 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_193706) do
+ActiveRecord::Schema.define(version: 2021_03_03_202106) do
 
   create_table "documents", force: :cascade do |t|
-    t.string "name"
+    t.binary "pdf", null: false
+    t.string "filename", null: false
+    t.date "delete_at", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
