@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # Updates for github actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+  # Updates for ruby gems
+  - package-ecosystem: "bundler"
+    directory: "/src/dokumentvwsys"
+    schedule:
+      interval: "daily"
