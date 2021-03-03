@@ -1,0 +1,73 @@
+name: 'Tests (and automerge for debendabot changes)'
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - 'releases/*'
+
+jobs:
+  #build:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #    - uses: actions/checkout@v2
+
+  #    - name: Set up Ruby
+  #      uses: ruby/setup-ruby@v1
+  #      env:
+  #        BUNDLE_GEMFILE: dokumentvwsys/Gemfile
+  #      with:
+  #        ruby-version: 2.6.3
+  #        bundler-cache: true
+
+  #    - name: Setup Node
+  #      uses: actions/setup-node@v2.1.4
+  #      with:
+  #        node-version: 15.8.0
+
+  #    - name: Find yarn cache location
+  #      id: yarn-cache
+  #      run: echo "::set-output name=dir::$(yarn cache dir)"
+
+  #    - name: JS package cache
+  #      uses: actions/cache@v2.1.4
+  #      with:
+  #        path: ${{ steps.yarn-cache.outputs.dir }}
+  #        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+  #        restore-keys: |
+  #          ${{ runner.os }}-yarn-
+
+  #    - name: Install packages
+  #      run: |
+  #        cd dokumentvwsys
+  #        yarn install --pure-lockfile
+
+  #    - name: Create DB
+  #      run: |
+  #        cd dokumentvwsys
+  #        bin/rails db:setup
+  #        bin/rails db:migrate
+  #        bin/rails db:fixtures:load
+
+  #    - name: Run Tests
+  #      run: |
+  #        cd dokumentvwsys
+  #        bundle exec rake test
+  automerge:
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
+    steps:
+      - name: auto-approve
+        uses: hmarr/auto-approve-action@v2.0.0
+        with:
+          github-token: "${{ github.token }}"
+      - name: auto-merge
+        uses: actions/github-script@0.2.0
+        with:
+          script: |
+            github.pullRequests.merge({
+              owner: context.payload.repository.owner.login,
+              repo: context.payload.repository.name,
+              pull_number: context.payload.pull_request.number
+            })
+          github-token: "${{ github.token }}"

@@ -1,0 +1,11 @@
+documentation:
+  - '/.*(README|docs|documentation|document).*/i'
+
+enhancement:
+  - '/.*(add|could you|would be nice|should).*/i'
+
+help wanted:
+  - '/.*help.*/i'
+
+critical:
+    - '/.*(critical|urgent).*/i'
