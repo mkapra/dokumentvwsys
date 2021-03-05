@@ -9,6 +9,17 @@
     <%= form.file_field :pdf %>
   </div>
 
+  <div class="field">
+    <%= fields_for :user, @document.user do |user_form| %>
+      <%= user_form.text_field :user, list: "names" %>
+      <datalist id="names">
+        <% User.all.each do |user| %>
+          <option value="<%= user %>">
+        <% end %>
+      </datalist>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
