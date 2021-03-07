@@ -4,12 +4,13 @@
     <%= form.date_select :delete_at, default: 2.weeks.from_now %>
   </div>
 
-  <div class="field">
-    <%= form.label :pdf %>
-    <%= form.file_field :pdf %>
+  <div class="custom-file">
+    <%= form.label :pdf, class: 'custom-file-label' %>
+    <%= form.file_field :pdf, class: 'custom-file-input' %>
   </div>
 
   <div class="field">
+    <%= form.label :user %>
     <%= fields_for :user, @document.user do |user_form| %>
       <%= user_form.text_field :user, list: "names" %>
       <datalist id="names">
