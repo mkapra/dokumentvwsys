@@ -9,6 +9,9 @@ class DocumentsController < ApplicationController
 
   def show
     @document = Document.find(params[:id])
+
+    return redirect_to :root unless @document.user == current_user
+
     if @document.filename.include? '.pdf'
       send_data(@document.pdf, type: 'application/pdf', filename: @document.filename)
     else
@@ -83,6 +86,8 @@ class DocumentsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_document
     @document = Document.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    redirect_to :root
   end
 
   # Only allow a list of trusted parameters through.
