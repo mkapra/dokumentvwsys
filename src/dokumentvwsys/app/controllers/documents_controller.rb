@@ -9,7 +9,7 @@ class DocumentsController < ApplicationController
 
   def show
     @document = Document.find(params[:id])
-    send_data(@document.pdf, :type => 'application/pdf', :filename => "#{@document.filename}.pdf", :disposition => 'inline')
+    send_data(@document.pdf, :type => 'application/pdf', :filename => "#{@document.filename}.pdf")
   end
 
   def new

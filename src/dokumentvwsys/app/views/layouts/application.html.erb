@@ -11,7 +11,13 @@
 </head>
 
 <body>
-<%= yield %>
+<%= render 'layouts/navbar' %>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+<%= render 'layouts/footer' %>
 
 <% if flash.any? %>
   <script type="text/javascript">

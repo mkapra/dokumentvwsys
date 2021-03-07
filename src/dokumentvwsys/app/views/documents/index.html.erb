@@ -1,31 +1,14 @@
-<h1>Documents</h1>
+<h1>Dokumente für <%= current_user.full_name %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Filename</th>
-      <th>Created at</th>
-      <th>Delete at</th>
-      <th>For user</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @documents.each do |document| %>
-      <tr>
-        <td><%= document.filename %></td>
-        <td><%= document.created_at %></td>
-        <td><%= document.delete_at %></td>
-        <td><%= document.user.full_name %></td>
-        <td><%= link_to 'Show', document %></td>
-        <td><%= link_to 'Edit', edit_document_path(document) %></td>
-        <td><%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Document', new_document_path %>
+<% @documents.each do |document| %>
+  <div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><%= document.filename %></h5>
+    <p class="card-text">
+      Hochgeladen am: <%= document.created_at.strftime("%d.%m.%Y") %> <br>
+      Verfügbar bis: <%= document.delete_at.strftime("%d.%m.%Y") %>
+    </p>
+    <%= link_to 'Download', document, class: 'card-link' %>
+  </div>
+</div>
+<% end %>
