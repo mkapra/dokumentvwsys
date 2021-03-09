@@ -10,6 +10,10 @@ class User < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
+  def admin?
+    role == 'admin'
+  end
+
   def birthdate_string
     birth.strftime("%d.%m.%Y")
   end
