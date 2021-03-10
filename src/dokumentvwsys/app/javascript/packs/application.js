@@ -3,11 +3,11 @@
 // logic in a relevant structure within app/javascript and only use these pack
 // files to reference that code so it'll be compiled.
 
-global.toastr = require("toastr")
+global.toastr = require("toastr");
 
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
-require("bootstrap")
-require("bootstrap-datepicker")
+require("@rails/ujs").start();
+require("turbolinks").start();
+require("@rails/activestorage").start();
+require("channels");
+require("bootstrap");
+require("bootstrap-datepicker");
