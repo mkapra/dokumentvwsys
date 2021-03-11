@@ -1,0 +1,8 @@
+de:
+  documents:
+    actions:
+      download: "Herunterladen"
+    fields:
+      heading: "Dokumente für"
+      uploaded_at: "Hochgeladen am"
+      delete_at: "Verfügbar bis"
