@@ -1,6 +1,12 @@
 @import "bootstrap/scss/bootstrap";
 @import "toastr/toastr";
+require bootstrap-datepicker
 
 .card {
   margin-bottom: 10px;
+}
+
+.center_div{
+  margin: 0 auto;
+  width:60%
 }

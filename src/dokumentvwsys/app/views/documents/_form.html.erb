@@ -1,7 +1,7 @@
 <%= form_for(@document, :html => { multipart: true }) do |form| %>
   <div class="field">
     <%= form.label :delete_at %>
-    <%= form.date_select :delete_at, default: 2.weeks.from_now %>
+    <%= form.text_field :delete_at, "data-provide" => 'datepicker', class:"form-control" %><br />
   </div>
 
   <div class="custom-file">
