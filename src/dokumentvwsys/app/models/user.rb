@@ -15,7 +15,7 @@ class User < ApplicationRecord
   end
 
   def birthdate_string
-    birth.strftime("%d.%m.%Y")
+    birth.strftime('%d.%m.%Y')
   end
 
   def to_s

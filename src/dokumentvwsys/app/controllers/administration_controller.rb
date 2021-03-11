@@ -11,14 +11,15 @@ class AdministrationController < ApplicationController
     @user = User.new
   end
 
-  def edit
-  end
+  def edit; end
 
-  def create
-  end
+  def create; end
 
   def destroy
-    redirect_to administration_index_path, flash: { error: 'Cannot delete yourself' } if params[:id].to_i == current_user.id
+    if params[:id].to_i == current_user.id
+      redirect_to administration_index_path,
+                  flash: { error: 'Cannot delete yourself' }
+    end
 
     User.find(params[:id]).destroy
     flash[:notice] = 'User deleted successfully'
