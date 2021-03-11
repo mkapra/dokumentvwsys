@@ -4,7 +4,6 @@ class AdministrationController < ApplicationController
 
   def index
     @users = User.all
-    @user = User.new
   end
 
   def new
@@ -12,8 +11,6 @@ class AdministrationController < ApplicationController
   end
 
   def edit; end
-
-  def create; end
 
   def destroy
     if params[:id].to_i == current_user.id
@@ -30,5 +27,9 @@ class AdministrationController < ApplicationController
 
   def verify_admin_user
     redirect_to root_path, flash: { error: 'Not allowed' } unless current_user.admin?
+  end
+
+  def resource_name
+    :user
   end
 end
