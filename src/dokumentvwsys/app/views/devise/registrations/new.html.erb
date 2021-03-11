@@ -4,30 +4,30 @@
     <div class="card card-signin my-5 card-body">
       <form class="form-signup">
         <div class="form-label-group">
-          <div class="center_div"><img src="/hi.png" id="icon" alt="User Icon" class: "mx-auto d-block"/></div>
+          <div class="center_div"><img src="/hi.png" id="icon" alt="User Icon"/></div>
           <%= f.label :username %><br />
-          <%= f.text_field :username, autofocus: true, autocomplete: "username", class:"form-control" %>
+          <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control" %>
 
           <%= f.label :email %><br />
-          <%= f.email_field :email, autocomplete: "email", class:"form-control" %>
+          <%= f.email_field :email, autocomplete: "email", class: "form-control" %>
 
           <%= f.label :full_name %><br />
-          <%= f.text_field :full_name, class:"form-control" %>
+          <%= f.text_field :full_name, class: "form-control" %>
 
           <%= f.label :password %>
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
           <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password", class:"form-control" %>
+          <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
 
           <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
 
           <%= f.label :birth %>
-          <%= f.date_select :birth, class:"form-control" %>
+          <%= f.date_select :birth, class: "form-control" %>
 
           <div class="actions">
-            <%= f.submit "Sign up", class:"btn btn-primary btn-lg btn-block" %>
+            <%= f.submit "Sign up", class: "btn btn-primary btn-lg btn-block" %>
           </div>
           <%= render "devise/shared/links" %>
       </form>
