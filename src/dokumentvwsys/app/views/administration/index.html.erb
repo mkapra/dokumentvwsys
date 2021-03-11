@@ -1,0 +1,32 @@
+<h1>Administrationspanel <%= link_to "#exampleModal", data: {toggle: 'modal', tartget: '#exampleModal'}, class: 'btn btn-primary' do %>Add user <%= icon("plus-circle")%><% end %></h1>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Benutzer erstellen</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render 'form', user: @user %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% @users.each do |user| %>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= user.full_name %></h5>
+      <p class="card-text">
+        Benutzername: <%= user.username %> <br>
+        E-Mail: <%= user.email %> <br>
+        Geburtsdatum: <%= user.birth.strftime("%d.%m.%Y") %> <br>
+      </p>
+      <%= link_to 'Edit', edit_administration_path(user.id), class: 'card-link' %>
+      <%= link_to 'Delete', administration_path(user.id), method: :delete, data: {confirm: "Are you sure?"}, class: 'card-link' %>
+    </div>
+  </div>
+<% end %>
