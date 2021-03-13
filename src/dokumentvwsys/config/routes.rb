@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :documents
-  devise_for :users
+  resources :administration
+
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
 
   root to: 'documents#index'
 end

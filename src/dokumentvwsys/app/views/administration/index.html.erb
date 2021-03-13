@@ -1,0 +1,16 @@
+<h1>Administrationspanel <%= link_to "Add user", new_administration_path, class: 'btn btn-primary'%></h1>
+
+<% @users.each do |user| %>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= user.full_name %></h5>
+      <p class="card-text">
+        Benutzername: <%= user.username %> <br>
+        E-Mail: <%= user.email %> <br>
+        Geburtsdatum: <%= user.birth.strftime("%d.%m.%Y") %> <br>
+      </p>
+      <%= link_to 'Edit', edit_administration_path(user.id), class: 'card-link' %>
+      <%= link_to 'Delete', administration_path(user.id), method: :delete, data: {confirm: "Are you sure?"}, class: 'card-link' %>
+    </div>
+  </div>
+<% end %>

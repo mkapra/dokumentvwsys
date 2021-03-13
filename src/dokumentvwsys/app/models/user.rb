@@ -1,8 +1,6 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 
   has_many :documents
 
@@ -10,8 +8,12 @@ class User < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
+  def admin?
+    role == 'admin'
+  end
+
   def birthdate_string
-    birth.strftime("%d.%m.%Y")
+    birth.strftime('%d.%m.%Y')
   end
 
   def to_s
