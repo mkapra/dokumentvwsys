@@ -3,7 +3,11 @@ de:
     username: "Benutzername"
     password: "Passwort"
     forgot_password: "Passwort vergessen?"
+    delete_at: "Verfügbar bis"
+    pdf_file: "PDF-Datei"
+    user: "Person"
   button:
     login: "Einloggen"
     logout: "Ausloggen"
+    create_document: "Dokument hochladen"
 

@@ -1,27 +1,26 @@
 <%= form_for(@document, :html => { multipart: true }) do |form| %>
-  <div class="field">
-    <%= form.label :delete_at %>
-    <%= form.text_field :delete_at, "data-provide" => 'datepicker', class:"form-control" %><br />
+  <div class="form-group">
+    <%= form.label :delete_at, t('label.delete_at') %>
+    <%= form.text_field :delete_at, "data-provide" => 'datepicker', class: "form-control " %><br/>
   </div>
 
-  <div class="custom-file">
-    <%= form.label :pdf, class: 'custom-file-label' %>
-    <%= form.file_field :pdf, class: 'custom-file-input' %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user %>
+  <div class="form-group">
+    <%= form.label :user, t('label.user') %>
     <%= fields_for :user, @document.user do |user_form| %>
-      <%= user_form.text_field :user, list: "names" %>
-      <datalist id="names">
-        <% User.all.each do |user| %>
-          <option value="<%= user %>">
-        <% end %>
-      </datalist>
+      <%= user_form.text_field :user, list: "names", class: "form-control" %>
     <% end %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group custom-file">
+    <%= form.label :pdf, t('label.pdf_file'), class: 'custom-file-label' %>
+    <%= form.file_field :pdf, class: 'custom-file-input' %>
   </div>
+
+  <%= form.submit t('button.create_document'), class: "btn btn-primary" %>
+
+  <datalist id="names">
+    <% User.all.each do |user| %>
+      <option value="<%= user %>">
+    <% end %>
+  </datalist>
 <% end %>

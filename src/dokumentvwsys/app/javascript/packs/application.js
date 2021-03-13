@@ -11,3 +11,9 @@ require("@rails/activestorage").start();
 require("channels");
 require("bootstrap");
 require("bootstrap-datepicker");
+
+import bsCustomFileInput from 'bs-custom-file-input'
+
+$(document).ready(function() {
+    bsCustomFileInput.init()
+})
