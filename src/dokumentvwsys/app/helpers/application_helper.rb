@@ -10,4 +10,10 @@ module ApplicationHelper
     svg['class'] += " #{options[:class]}" if options[:class].present?
     doc.to_html.html_safe
   end
+
+  def navbar_item(label, path)
+    "<li class=\"nav-item #{is_active_page? path}\">
+      #{link_to t("navbar.#{label}"), path, class: 'nav-link'}
+    </li>".html_safe
+  end
 end
