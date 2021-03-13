@@ -1,0 +1,9 @@
+en:
+  label:
+    username: "Username"
+    password: "Password"
+    forgot_password: "Forgot Password?"
+  button:
+    login: "Log In"
+    logout: "Log Out"
+
