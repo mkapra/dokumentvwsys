@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DocumentsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_document, only: %i[ show edit update destroy ]
@@ -21,9 +23,6 @@ class DocumentsController < ApplicationController
 
   def new
     @document = Document.new
-  end
-
-  def edit
   end
 
   def create
