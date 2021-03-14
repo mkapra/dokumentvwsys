@@ -1,4 +1,7 @@
 en:
   navbar:
+    administration: "Administration"
     startpage: "Startpage"
-    logout: "Logout"
+    overview: "Overview over users"
+    new_user: "New User"
+    new_document: "New Document"

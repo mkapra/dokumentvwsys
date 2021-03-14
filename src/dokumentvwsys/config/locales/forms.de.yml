@@ -1,0 +1,12 @@
+de:
+  button:
+    create_document: "Dokument hochladen"
+    login: "Einloggen"
+    logout: "Ausloggen"
+  label:
+    delete_at: "Verfügbar bis"
+    forgot_password: "Passwort vergessen?"
+    password: "Passwort"
+    pdf_file: "PDF-Datei"
+    user: "Person"
+    username: "Benutzername"

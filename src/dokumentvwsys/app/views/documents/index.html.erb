@@ -5,10 +5,10 @@
   <div class="card-body">
     <h5 class="card-title"><%= document.filename %></h5>
     <p class="card-text">
-      <%= t('documents.fields.uploaded_at') %>: <%= document.created_at.strftime("%d.%m.%Y") %> <br>
-      <%= t('documents.fields.delete_at') %>: <%= document.delete_at.strftime("%d.%m.%Y") %>
+      <%= t('label.uploaded_at') %>: <%= document.created_at.strftime("%d.%m.%Y") %> <br>
+      <%= t('label.delete_at') %>: <%= document.delete_at.strftime("%d.%m.%Y") %>
     </p>
-    <%= link_to t('documents.actions.download'), document, class: 'card-link' %>
+    <%= link_to t('button.download'), document, class: 'card-link' %>
   </div>
 </div>
 <% end %>

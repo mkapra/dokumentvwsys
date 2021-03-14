@@ -1,23 +1,32 @@
 <% if current_user %>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><%= Preference.where(key: 'title').first %></a>
+    <%= link_to Preference.where(key: 'title').first, root_path, class: 'navbar-brand' %>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Left aligned navbar -->
       <ul class="navbar-nav">
-        <li class="nav-item <%= is_active_page? root_path %>">
-          <a class="nav-link" href="#"><%= t('navbar.startpage') %></a>
-        </li>
+        <%= navbar_item 'startpage', root_path %>
+
         <% if current_user.admin? %>
-          <li class="nav-item <%= is_active_page? administration_index_path %>">
-            <%= link_to 'Administration', administration_index_path, class: 'nav-link' %>
+          <li class="nav-item dropdown">
+            <%= link_to t('navbar.administration'), '#', class: "nav-link dropdown-toggle", id: 'adminDropdown', role: 'button', data: { toggle: 'dropdown' }, aria: { haspopup: true, expanded: false } %>
+            <div class="dropdown-menu" aria-labelledby="adminDropdown">
+              <%= navbar_dropdown_item 'overview', administration_index_path %>
+              <%= navbar_dropdown_item 'new_user', new_administration_path %>
+              <div class="dropdown-divider"></div>
+              <%= navbar_dropdown_item 'new_document', new_document_path %>
+            </div>
           </li>
         <% end %>
       </ul>
 
+      <!-- Right aligned navbar -->
       <ul class="navbar-nav ml-auto">
-        <li><%= button_to t('navbar.logout'), destroy_user_session_path, method: 'delete', class: "btn btn-danger ml-auto" %></li>
+        <li><%= button_to t('button.logout'), destroy_user_session_path, method: 'delete', class: "btn btn-danger ml-auto" %></li>
       </ul>
     </div>
   </nav>

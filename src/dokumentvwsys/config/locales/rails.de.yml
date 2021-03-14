@@ -3,11 +3,12 @@ de:
   activerecord:
     errors:
       messages:
-        record_invalid: 'Gültigkeitsprüfung ist fehlgeschlagen: %{errors}'
+        record_invalid: "Gültigkeitsprüfung ist fehlgeschlagen: %{errors}"
         restrict_dependent_destroy:
-          has_one: Datensatz kann nicht gelöscht werden, da ein abhängiger %{record}-Datensatz
-            existiert.
           has_many: Datensatz kann nicht gelöscht werden, da abhängige %{record} existieren.
+          has_one:
+            Datensatz kann nicht gelöscht werden, da ein abhängiger %{record}-Datensatz
+            existiert.
   date:
     abbr_day_names:
       - So
@@ -76,36 +77,36 @@ de:
         one: fast ein Jahr
         other: fast %{count} Jahre
       half_a_minute: eine halbe Minute
-      less_than_x_seconds:
-        one: weniger als eine Sekunde
-        other: weniger als %{count} Sekunden
       less_than_x_minutes:
         one: weniger als eine Minute
         other: weniger als %{count} Minuten
+      less_than_x_seconds:
+        one: weniger als eine Sekunde
+        other: weniger als %{count} Sekunden
       over_x_years:
         one: mehr als ein Jahr
         other: mehr als %{count} Jahre
-      x_seconds:
-        one: eine Sekunde
-        other: "%{count} Sekunden"
-      x_minutes:
-        one: eine Minute
-        other: "%{count} Minuten"
       x_days:
         one: ein Tag
         other: "%{count} Tage"
+      x_minutes:
+        one: eine Minute
+        other: "%{count} Minuten"
       x_months:
         one: ein Monat
         other: "%{count} Monate"
+      x_seconds:
+        one: eine Sekunde
+        other: "%{count} Sekunden"
       x_years:
         one: ein Jahr
         other: "%{count} Jahre"
     prompts:
-      second: Sekunde
-      minute: Minute
-      hour: Stunde
       day: Tag
+      hour: Stunde
+      minute: Minute
       month: Monat
+      second: Sekunde
       year: Jahr
   errors:
     format: "%{attribute} %{message}"
@@ -123,7 +124,7 @@ de:
       invalid: ist nicht gültig
       less_than: muss kleiner als %{count} sein
       less_than_or_equal_to: muss kleiner oder gleich %{count} sein
-      model_invalid: 'Gültigkeitsprüfung ist fehlgeschlagen: %{errors}'
+      model_invalid: "Gültigkeitsprüfung ist fehlgeschlagen: %{errors}"
       not_a_number: ist keine Zahl
       not_an_integer: muss ganzzahlig sein
       odd: muss ungerade sein
@@ -141,10 +142,10 @@ de:
         one: hat die falsche Länge (muss genau 1 Zeichen haben)
         other: hat die falsche Länge (muss genau %{count} Zeichen haben)
     template:
-      body: 'Bitte überprüfen Sie die folgenden Felder:'
+      body: "Bitte überprüfen Sie die folgenden Felder:"
       header:
-        one: 'Konnte %{model} nicht speichern: ein Fehler.'
-        other: 'Konnte %{model} nicht speichern: %{count} Fehler.'
+        one: "Konnte %{model} nicht speichern: ein Fehler."
+        other: "Konnte %{model} nicht speichern: %{count} Fehler."
   helpers:
     select:
       prompt: Bitte wählen
@@ -185,9 +186,9 @@ de:
           trillion:
             one: Billion
             other: Billionen
-          unit: ''
+          unit: ""
       format:
-        delimiter: ''
+        delimiter: ""
         precision: 3
         significant: true
         strip_insignificant_zeros: true
@@ -203,11 +204,11 @@ de:
           tb: TB
     percentage:
       format:
-        delimiter: ''
+        delimiter: ""
         format: "%n %"
     precision:
       format:
-        delimiter: ''
+        delimiter: ""
   support:
     array:
       last_word_connector: " und "
