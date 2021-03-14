@@ -1,13 +1,12 @@
 de:
-  label:
-    username: "Benutzername"
-    password: "Passwort"
-    forgot_password: "Passwort vergessen?"
-    delete_at: "Verfügbar bis"
-    pdf_file: "PDF-Datei"
-    user: "Person"
   button:
+    create_document: "Dokument hochladen"
     login: "Einloggen"
     logout: "Ausloggen"
-    create_document: "Dokument hochladen"
-
+  label:
+    delete_at: "Verfügbar bis"
+    forgot_password: "Passwort vergessen?"
+    password: "Passwort"
+    pdf_file: "PDF-Datei"
+    user: "Person"
+    username: "Benutzername"
