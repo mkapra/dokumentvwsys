@@ -12,8 +12,8 @@ require("channels");
 require("bootstrap");
 require("bootstrap-datepicker");
 
-import bsCustomFileInput from 'bs-custom-file-input'
+import bsCustomFileInput from "bs-custom-file-input";
 
-$(document).ready(function() {
-    bsCustomFileInput.init()
-})
+$(document).ready(function () {
+  bsCustomFileInput.init();
+});
