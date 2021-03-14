@@ -6,13 +6,21 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Left aligned navbar -->
     <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Left aligned navbar -->
       <ul class="navbar-nav">
         <%= navbar_item 'startpage', root_path %>
 
         <% if current_user.admin? %>
-          <%= navbar_item 'administration', administration_index_path %>
+          <li class="nav-item dropdown">
+            <%= link_to t('navbar.administration'), '#', class: "nav-link dropdown-toggle", id: 'adminDropdown', role: 'button', data: { toggle: 'dropdown' }, aria: { haspopup: true, expanded: false } %>
+            <div class="dropdown-menu" aria-labelledby="adminDropdown">
+              <%= navbar_dropdown_item 'overview', administration_index_path %>
+              <%= navbar_dropdown_item 'new_user', new_administration_path %>
+              <div class="dropdown-divider"></div>
+              <%= navbar_dropdown_item 'new_document', new_document_path %>
+            </div>
+          </li>
         <% end %>
       </ul>
 

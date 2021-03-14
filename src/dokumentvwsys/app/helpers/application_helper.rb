@@ -16,4 +16,8 @@ module ApplicationHelper
       #{link_to t("navbar.#{label}"), path, class: 'nav-link'}
     </li>".html_safe
   end
+
+  def navbar_dropdown_item(label, path)
+    link_to t("navbar.#{label}"), path, class: 'nav-link'
+  end
 end
