@@ -60,18 +60,6 @@ class DocumentsController < ApplicationController
     end
   end
 
-  def update
-    respond_to do |format|
-      if @document.update(document_params)
-        format.html { redirect_to @document, notice: 'Document was successfully updated.' }
-        format.json { render :show, status: :ok, location: @document }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @document.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
   def destroy
     @document.destroy
     respond_to do |format|

@@ -17,7 +17,6 @@
   </div>
 
   <%= form.submit t('button.create_document'), class: "btn btn-primary" %>
-
   <datalist id="names">
     <% User.all.each do |user| %>
       <option value="<%= user %>">
