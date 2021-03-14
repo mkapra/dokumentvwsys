@@ -35,22 +35,22 @@ class DocumentsController < ApplicationController
       if params[:document][:pdf]
         t.pdf = params[:document][:pdf].read
         t.filename = params[:document][:pdf].original_filename
-
-        #return render action: 'new', error: 'Error while creating: ' + @document.errors.full_messages.to_s
       end
 
       if params[:user]
         user_string = params[:user]["user"]
         first_name, last_name, birthdate =
-          user_string.match(/(\w+) (\w+) \(((0?[1-9]|1[0-2])\.([0-2]?[1-9]|[1-3][01])\.\d{4})\)/).captures
+          user_string.match(/(\w+) (\w+) \(((0?[1-9]|1[0-9]|2[0-9]|3[0-1])\.([0-2]?[1-9]|[1-3][01])\.\d{4})\)/).captures
         birthdate_obj = Date.strptime(birthdate, "%d.%m.%Y")
         user = User.find_by(first_name: first_name, last_name: last_name, birth: birthdate_obj)
-        if user
-          t.user = user
-        else
-          return redirect_to 'new_document_path', flash: { error: "User not found" }
-        end
+
+        return redirect_to 'new_document_path', flash: { error: "User not found" } unless user
+
+        t.user = user
       end
+
+      # TODO: Fix with #31
+      t.delete_at = Date.strptime(params[:document][:delete_at], "%d/%m/%Y")
     end
 
     if @document.save
