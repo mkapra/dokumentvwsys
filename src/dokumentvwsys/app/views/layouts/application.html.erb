@@ -14,6 +14,8 @@
 <%= render 'layouts/navbar' %>
 
 <div class="container">
+  <h1><%= yield :title %></h1>
+
   <%= yield %>
 </div>
 
@@ -28,4 +30,10 @@
   </script>
 <% end %>
 </body>
+
+<% if content_for?(:javascript) %>
+  <script>
+      <%= yield :javascript %>
+  </script>
+<% end %>
 </html>

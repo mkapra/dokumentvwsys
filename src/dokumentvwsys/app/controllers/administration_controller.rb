@@ -8,6 +8,15 @@ class AdministrationController < ApplicationController
 
   def new
     @user = User.new
+    return unless params[:user]
+
+    split_name = params[:user].split(' ')
+    @user.first_name = split_name[0]
+    @user.last_name = if split_name.length > 2
+                        split_name[1, split_name.length]
+                      else
+                        split_name[1]
+                      end
   end
 
   def edit; end

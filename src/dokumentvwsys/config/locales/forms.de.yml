@@ -1,12 +1,22 @@
 de:
   button:
     create_document: "Dokument hochladen"
+    download: "Herunterladen"
     login: "Einloggen"
     logout: "Ausloggen"
+    generate_username: "Benutzernamen generieren"
+    create_user: "Benutzer erstellen"
   label:
     delete_at: "Verfügbar bis"
     forgot_password: "Passwort vergessen?"
     password: "Passwort"
     pdf_file: "PDF-Datei"
+    uploaded_at: "Hochgeladen am"
     user: "Person"
     username: "Benutzername"
+    first_name: "Vorname"
+    last_name: "Nachname"
+    email: "E-Mail Adresse"
+    birth: "Geburtsdatum"
+  placeholder:
+    name: "Name"

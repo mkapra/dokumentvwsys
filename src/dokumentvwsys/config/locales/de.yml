@@ -5,3 +5,7 @@ de:
     new_user: "Neuer Benutzer"
     overview: "Übersicht aller Benutzer"
     startpage: "Startseite"
+  headings:
+    new_document: "Neues Dokument hochladen"
+    administration_index: "Administrationspanel"
+    new_user: "Neuen Benutzer erstellen"

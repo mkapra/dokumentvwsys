@@ -1,4 +1,4 @@
-<h1><%= "#{t('documents.fields.heading')} #{current_user.full_name}" %></h1>
+<% content_for :title, "#{t('documents.fields.heading')} #{current_user.full_name}" %>
 
 <% @documents.each do |document| %>
   <div class="card">

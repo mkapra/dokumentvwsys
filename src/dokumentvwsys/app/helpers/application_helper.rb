@@ -20,4 +20,8 @@ module ApplicationHelper
   def navbar_dropdown_item(label, path)
     link_to t("navbar.#{label}"), path, class: 'nav-link'
   end
+
+  def inline_help(help_text, object_name, method)
+    content_tag :small, help_text, class: "help-inline", id: "#{object_name}_#{method}_inline"
+  end
 end
