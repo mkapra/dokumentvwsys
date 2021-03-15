@@ -1,0 +1,9 @@
+<% content_for :title, t('headings.preferences') %>
+
+<% @preferences.each do |group, settings| %>
+  <h2><%= t("preferences.group.#{group}") %></h2>
+  <% settings.each do |setting| %>
+    <%= render 'form', preference: setting %>
+  <% end %>
+  <hr/>
+<% end %>

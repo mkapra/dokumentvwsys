@@ -24,15 +24,15 @@
 <% end %>
 
 <% content_for :javascript do %>
-function filter_names() {
-  input = document.getElementById('searchUser').value.toUpperCase();
-  Array.prototype.forEach.call(document.getElementsByClassName('card'), function(card) {
+  function filter_names() {
+    input = document.getElementById('searchUser').value.toUpperCase();
+    Array.prototype.forEach.call(document.getElementsByClassName('card'), function(card) {
       heading = card.getElementsByClassName('card-body')[0].getElementsByClassName('card-title')[0].innerHTML;
       if (heading && heading.toUpperCase().includes(input)) {
         card.style.display = "";
       } else {
         card.style.display = "none";
+      }
+    });
   }
-  });
-}
 <% end %>
