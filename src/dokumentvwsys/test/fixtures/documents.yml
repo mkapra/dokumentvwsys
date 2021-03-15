@@ -1,13 +1,13 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+<% User.all.each do |user| %>
+pdf<%= user.id %>-1:
+  pdf: <%= binary('test/fixtures/files/pdf1.pdf') %>
+  filename: <%= "#{user.first_name}_#{user.last_name}-pdf.pdf" %>
+  delete_at: <%= 2.weeks.from_now %>
+  user_id: <%= user.id %>
 
-one:
-  pdf: 
-  filename: MyString
-  created_at: 2021-03-03
-  delete_at: 2021-03-03
-
-two:
-  pdf: 
-  filename: MyString
-  created_at: 2021-03-03
-  delete_at: 2021-03-03
+pdf<%= user.id %>-2:
+  pdf: <%= binary('test/fixtures/files/pdf2.pdf') %>
+  filename: <%= "#{user.first_name}_#{user.last_name}-pdf2" %>
+  delete_at: <%= 2.weeks.from_now %>
+  user_id: <%= user.id %>
+<% end %>
