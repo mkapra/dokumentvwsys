@@ -1,7 +1,7 @@
 de:
   navbar:
     administration: "Administration"
+    new_document: "Neues Dokument"
+    new_user: "Neuer Benutzer"
     overview: "Übersicht aller Benutzer"
     startpage: "Startseite"
-    new_user: "Neuer Benutzer"
-    new_document: "Neues Dokument"
