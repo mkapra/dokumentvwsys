@@ -1,3 +1,6 @@
 en:
   preferences:
-    title: "Name of the application"
+    key:
+      title: "Name of the application"
+    group:
+      basic: "Basic configuration"

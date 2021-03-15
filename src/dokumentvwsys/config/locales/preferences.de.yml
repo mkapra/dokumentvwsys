@@ -1,3 +1,6 @@
 de:
   preferences:
-    title: "Name der Applikation"
+    description:
+      title: "Name der Applikation"
+    group:
+      basic: "Grundkonfiguration"

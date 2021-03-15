@@ -26,6 +26,10 @@
 
       <!-- Right aligned navbar -->
       <ul class="navbar-nav ml-auto">
+        <% if current_user.admin? %>
+          <li><%= button_to preferences_path, action: 'show', method: 'get', class: 'btn' do %><%= icon('gear-wide-connected') %>
+            <% end %></li>
+        <% end %>
         <li><%= button_to t('button.logout'), destroy_user_session_path, method: 'delete', class: "btn btn-danger ml-auto" %></li>
       </ul>
     </div>
