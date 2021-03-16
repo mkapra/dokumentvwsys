@@ -4,15 +4,15 @@
       <form class="form-signin">
         <div class="form-label-group">
           <div class="center_div"><img src="/hi.png" id="icon" alt="User Icon"/></div>
-          <%= f.label :username, t('label.username') %><br />
+          <%= f.label :username, t('label.username') %>
           <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control" %>
 
-          <%= f.label :password, t('label.password') %><br />
+          <%= f.label :password, t('label.password') %>
           <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
         </div>
 
         <div class="actions">
-          <%= f.submit t('button.login'), class: "btn btn-primary btn-lg btn-block" %>
+          <%= f.submit t('button.login'), class: "btn btn-primary btn-lg btn-block mt-3" %>
         </div>
         <div><%= render "devise/shared/links" %></div>
       </form>
