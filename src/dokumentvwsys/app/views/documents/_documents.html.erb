@@ -1,0 +1,15 @@
+<% @documents.each do |document| %>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= document.filename %></h5>
+      <p class="card-text">
+        <%= t('label.uploaded_at') %>: <%= document.created_at.strftime("%d.%m.%Y") %> <br>
+        <%= t('label.delete_at') %>: <%= document.delete_at.strftime("%d.%m.%Y") %>
+      </p>
+      <%= link_to t('button.download'), document, class: 'card-link' %>
+      <% if @delete %>
+        <%= link_to t('button.delete'), document, method: 'delete', class: 'card-link' %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
