@@ -19,4 +19,4 @@ $(document).ready(function () {
   bsCustomFileInput.init();
 });
 
-$.fn.datepicker.defaults.language = 'de';
+$.fn.datepicker.defaults.language = "de";
