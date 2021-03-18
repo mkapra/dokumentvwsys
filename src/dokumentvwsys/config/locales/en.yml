@@ -5,8 +5,10 @@ en:
     new_user: "New User"
     overview: "Overview over users"
     startpage: "Startpage"
+    all_documents: "All Documents"
   headings:
     new_document: "Upload new Document"
     administration_index: "Administrationpanel"
     new_user: "Create new User"
     preferences: "Settings"
+    all_documents: "All Documents"

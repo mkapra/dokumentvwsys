@@ -5,14 +5,20 @@ class DocumentsController < ApplicationController
   before_action :set_document, only: %i[show edit update destroy]
   add_flash_types :errors
 
+  def all
+    @delete = true
+    @documents = Document.all if current_user.admin?
+  end
+
   def index
+    @delete = false
     @documents = current_user.documents
   end
 
   def show
     @document = Document.find(params[:id])
 
-    return redirect_to :root unless @document.user == current_user
+    return redirect_to :root unless @document.user == current_user || current_user.admin?
 
     if @document.filename.include? '.pdf'
       send_data(@document.pdf, type: 'application/pdf', filename: @document.filename)

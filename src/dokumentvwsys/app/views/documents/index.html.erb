@@ -1,14 +1,3 @@
 <% content_for :title, "#{t('documents.fields.heading')} #{current_user.full_name}" %>
 
-<% @documents.each do |document| %>
-  <div class="card">
-  <div class="card-body">
-    <h5 class="card-title"><%= document.filename %></h5>
-    <p class="card-text">
-      <%= t('label.uploaded_at') %>: <%= document.created_at.strftime("%d.%m.%Y") %> <br>
-      <%= t('label.delete_at') %>: <%= document.delete_at.strftime("%d.%m.%Y") %>
-    </p>
-    <%= link_to t('button.download'), document, class: 'card-link' %>
-  </div>
-</div>
-<% end %>
+<%= render 'documents' %>

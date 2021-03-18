@@ -6,6 +6,7 @@ en:
     logout: "Log Out"
     generate_username: "Generate username"
     create_user: "Create user"
+    delete: "Delete"
   label:
     delete_at: "Available until"
     forgot_password: "Forgot Password?"
