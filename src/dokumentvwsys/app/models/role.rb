@@ -6,14 +6,14 @@ class Role < ApplicationRecord
   end
 
   def admin?
-    name == "admin"
+    name == 'admin'
   end
 
   def uploader?
-    name == "uploader"
+    name == 'uploader'
   end
 
   def user?
-    name == "user"
+    name == 'user'
   end
 end
