@@ -23,7 +23,7 @@ class AdministrationController < ApplicationController
 
   def destroy
     if params[:id].to_i == current_user.id
-      redirect_to administration_index_path,
+      return redirect_to administration_index_path,
                   flash: { error: 'Cannot delete yourself' }
     end
 
