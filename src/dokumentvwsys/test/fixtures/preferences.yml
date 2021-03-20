@@ -1,0 +1,5 @@
+preference_title:
+  key: 'title'
+  value: "TEST_dkvwsys"
+  description: 'preferences.description.title'
+  group: 'basic'

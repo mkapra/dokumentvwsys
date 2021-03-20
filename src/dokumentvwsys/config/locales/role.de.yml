@@ -1,0 +1,9 @@
+de:
+  role:
+    admin: "Administrator"
+    uploader: "Uploader"
+    user: "Benutzer"
+    description:
+      admin: "Darf Benutzer erstellen/editieren/löschen und Dokumente hochladen/löschen"
+      uploader: "Darf Dokumente hochladen und löschen"
+      user: "Darf nur Dokumente herunterladen. Dies is der Standardwert"

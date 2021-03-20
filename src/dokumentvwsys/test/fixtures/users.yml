@@ -1,62 +1,62 @@
-administrator:
+user_administrator:
   first_name: Super
   last_name: Administrator
   username: admin
   email: admin@istrator.de
   birth: <%= Date.new 1999, 03, 02 %>
   encrypted_password: <%= User.new.send(:password_digest, 'admin') %>
-  role: admin
+  role: role_admin
 
-uploader:
+user_uploader:
   first_name: Upload
   last_name: User
   username: upload
   email: upload@er.de
   birth: <%= Date.new 1970, 04, 01 %>
   encrypted_password: <%= User.new.send(:password_digest, 'upload') %>
-  role: uploader
+  role: role_uploader
 
-franz:
+user_franz:
   first_name: Franz
   last_name: Müller
   username: franz
   email: franz@mueller.de
   birth: <%= Date.new 2002, 05, 12 %>
   encrypted_password: <%= User.new.send(:password_digest, 'franz') %>
-  role: user
+  role: role_user
 
-lena:
+user_lena:
   first_name: Lena
   last_name: Meier
   username: lena
   email: lena@meier.de
   birth: <%= Date.new 1998, 05, 12 %>
   encrypted_password: <%= User.new.send(:password_digest, 'lena') %>
-  role: user
+  role: role_user
 
-siegfried:
+user_siegfried:
   first_name: Siegfried
   last_name: Peters
   username: siegfried
   email: siegfried@peters.de
   birth: <%= Date.new 1967, 05, 12 %>
   encrypted_password: <%= User.new.send(:password_digest, 'siegfried') %>
-  role: user
+  role: role_user
 
-katharina:
+user_katharina:
   first_name: Kathatrina
   last_name: Green
   username: katharina
   email: katharina@green.de
   birth: <%= Date.new 1980, 05, 12 %>
   encrypted_password: <%= User.new.send(:password_digest, 'katharina') %>
-  role: user
+  role: role_user
 
-christian:
+user_christian:
   first_name: Christian
   last_name: Fritz
   username: christian
   email: christian@fritz.de
   birth: <%= Date.new 1975, 05, 12 %>
   encrypted_password: <%= User.new.send(:password_digest, 'christian') %>
-  role: user
+  role: role_user

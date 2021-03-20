@@ -7,7 +7,7 @@ class DocumentsController < ApplicationController
 
   def all
     @delete = true
-    @documents = Document.all if current_user.admin?
+    @documents = Document.all.order('user_id desc') if current_user.admin?
   end
 
   def index
