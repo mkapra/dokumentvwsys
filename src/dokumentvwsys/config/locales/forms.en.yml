@@ -19,5 +19,6 @@ en:
     last_name: "Last name"
     email: "E-Mail address"
     birth: "Birth date"
+    role: "Role"
   placeholder:
     name: "Name"

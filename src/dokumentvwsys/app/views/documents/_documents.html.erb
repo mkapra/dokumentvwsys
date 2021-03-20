@@ -3,8 +3,11 @@
     <div class="card-body">
       <h5 class="card-title"><%= document.filename %></h5>
       <p class="card-text">
-        <%= t('label.uploaded_at') %>: <%= document.created_at.strftime("%d.%m.%Y") %> <br>
-        <%= t('label.delete_at') %>: <%= document.delete_at.strftime("%d.%m.%Y") %>
+        <b><%= t('label.uploaded_at') %></b>: <%= document.created_at.strftime("%d.%m.%Y") %> <br>
+        <b><%= t('label.delete_at') %></b>: <%= document.delete_at.strftime("%d.%m.%Y") %> <br>
+        <% if @delete %>
+          <b><%= t('label.user') %></b>: <%= document.user.full_name %>
+        <% end %>
       </p>
       <%= link_to t('button.download'), document, class: 'card-link' %>
       <% if @delete %>
