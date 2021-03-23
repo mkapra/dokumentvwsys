@@ -5,7 +5,11 @@
         <div class="form-label-group">
           <div class="center_div"><img src="/hi.png" id="icon" alt="User Icon"/></div>
           <%= f.label :username, t('label.username') %>
-          <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control" %>
+          <% if params[:username].nil? %>
+            <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control" %>
+          <% else %>
+            <%= f.text_field :username, autofocus: true, value: params[:username], autocomplete: "username", class: "form-control" %>
+          <% end %>
 
           <%= f.label :password, t('label.password') %>
           <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
