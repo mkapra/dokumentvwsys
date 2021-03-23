@@ -1,6 +1,17 @@
 en:
   message:
     error:
+      not_found_descr: |
+        The page you were looking for doesn't exist.
+        You may have mistyped the address or the page may have moved.
+      not_found_title: "Site not found"
       save_settings: "Error while saving settings!"
+      server_error_descr: |
+        An error has occurred during processing. If this error continues to occur
+        should occur, please report it to the website operator.
+      server_error_title: "An Error has occured"
+    notice:
+      create_user: "User created successfully!"
+      delete_user: "User deleted successfully!"
     success:
       save_settings: "Setting saved successfully!"

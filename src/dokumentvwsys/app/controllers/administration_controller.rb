@@ -1,4 +1,6 @@
 class AdministrationController < ApplicationController
+  include AdministrationHelper
+
   before_action :authenticate_user!
   before_action :verify_admin_user
 
@@ -28,17 +30,9 @@ class AdministrationController < ApplicationController
     end
 
     User.find(params[:id]).destroy
-    flash[:notice] = 'User deleted successfully'
+    flash[:notice] = t('message.notice.delete_user')
     redirect_to action: 'index'
   rescue ActiveRecord::RecordNotFound
     redirect_to action: 'index', flash: { error: 'User not found' }
-  end
-
-  def verify_admin_user
-    redirect_to root_path, flash: { error: 'Not allowed' } unless current_user.admin?
-  end
-
-  def resource_name
-    :user
   end
 end
