@@ -1,5 +1,5 @@
 de:
   registration:
-      username: Benutzername
-      password: Passwort
-      url: Link
+    username: Benutzername
+    password: Passwort
+    url: Link
