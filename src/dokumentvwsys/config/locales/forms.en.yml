@@ -7,6 +7,7 @@ en:
     generate_username: "Generate username"
     login: "Log In"
     logout: "Log Out"
+    save: "Save"
   label:
     birth: "Birth date"
     delete_at: "Available until"
@@ -16,6 +17,7 @@ en:
     last_name: "Last name"
     password: "Password"
     pdf_file: "PDF file"
+    png_file: "PNG file"
     role: "Role"
     uploaded_at: "Uploaded on"
     user: "Person"

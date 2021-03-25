@@ -1,0 +1,5 @@
+de:
+  error:
+    empty_file: "Das Datei-Feld darf nicht leer sein!"
+    not_a_png: "Es sind nur PNG Dateien erlaubt!"
+    save_settings: "Fehler beim Speichern der Einstellung!"

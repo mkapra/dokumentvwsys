@@ -1,14 +1,23 @@
-<%= form_for preference, html: { class: 'form-inline' } do |f| %>
+<%= form_for preference, html: { class: 'form-inline row' } do |f| %>
   <%= f.text_field :key, value: preference.key, hidden: true %>
-  <div class="form-group mx-sm-3 mb-2">
-    <%= f.label :description, "Description", class: 'sr-only' %>
-    <%= f.text_field :description, value: t(preference.description, default: preference.description), class: 'form-control', readonly: true %>
+
+  <div class="col-5 input-group mb-2">
+    <%= f.text_field :description, value: t("preferences.description.#{preference.key}", default: preference.key), class: 'form-control', readonly: true %>
   </div>
 
-  <div class="form-group mx-sm-3 mb-2">
-    <%= f.label :value, 'Value', class: 'sr-only' %>
-    <%= f.text_field :value, value: preference.value, class: "form-control" %>
+  <div class="col-5 input-group mb-2">
+    <% if preference.is_file %>
+      <div class="custom-file">
+        <%= f.label :file, t('label.png_file'), class: 'custom-file-label' %>
+        <%= f.file_field :file, class: 'custom-file-input' %>
+      </div>
+    <% else %>
+      <%= f.label :value, 'Value', class: 'sr-only' %>
+      <%= f.text_field :value, value: preference.value, class: "form-control" %>
+    <% end %>
   </div>
 
-  <%= f.submit 'Save', class: 'btn btn-primary mb-2' %>
+  <div class="col mb-2">
+    <%= f.submit t('button.save'), class: 'btn btn-primary' %>
+  </div>
 <% end %>
