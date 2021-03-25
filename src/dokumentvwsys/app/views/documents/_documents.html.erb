@@ -1,7 +1,7 @@
 <% @documents.each do |document| %>
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title"><%= document.filename %></h5>
+      <h5 class="card-title"><%= get_filename(document.filename) %></h5>
       <p class="card-text">
         <b><%= t('label.uploaded_at') %></b>: <%= document.created_at.strftime("%d.%m.%Y") %> <br>
         <b><%= t('label.delete_at') %></b>: <%= document.delete_at.strftime("%d.%m.%Y") %> <br>

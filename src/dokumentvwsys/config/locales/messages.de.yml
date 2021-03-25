@@ -1,4 +1,17 @@
 de:
   message:
+    error:
+      not_found_descr: |
+        Die gesuchte Seite konnte nicht gefundne werden. Vielleicht
+        haben Sie sich bei der Adresse vertippt oder die Seite wurde verschoben.
+      not_found_title: "Seite nicht gefunden!"
+      save_settings: "Fehler beim Speichern der Einstellung!"
+      server_error_descr: |
+        Bei der Verarbeitung ist ein Fehler aufgetreten. Falls dieser Fehler weiterhin
+        auftreten sollte, melden Sie diesen bitte beim Betreiber der Website.
+      server_error_title: "Ein Fehler ist aufgetreten!"
+    notice:
+      create_user: "Benutzer erfolgreich erstellt!"
+      delete_user: "Benutzer erfolgreich gelöscht!"
     success:
       save_settings: "Einstellung erfolgreich gespeichert!"

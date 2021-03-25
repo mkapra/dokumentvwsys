@@ -6,3 +6,5 @@ en:
     group:
       appearance: "Appearance"
       basic: "Basic configuration"
+    key:
+      title: "Name of the application"
