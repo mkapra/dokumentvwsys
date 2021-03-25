@@ -2,5 +2,6 @@ de:
   preferences:
     description:
       title: "Name der Applikation"
+      url: "Basis Domain für die Homepage"
     group:
       basic: "Grundkonfiguration"

@@ -16,3 +16,19 @@ require bootstrap-datepicker
 .card {
   margin-bottom: 10px;
 }
+
+table, td, th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+thead, tfoot {
+  background-color: #333;
+  color: #fff;
+}
+
+.center_logo {
+  margin-right: 100%;
+  margin: 0 auto;
+  height: 256px;
+}

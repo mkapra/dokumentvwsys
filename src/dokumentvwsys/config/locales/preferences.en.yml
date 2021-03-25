@@ -1,6 +1,7 @@
 en:
   preferences:
-    key:
+    description:
       title: "Name of the application"
+      url: "Base domain of the homepage"
     group:
       basic: "Basic configuration"

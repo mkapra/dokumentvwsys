@@ -3,3 +3,9 @@ preference_title:
   value: "TEST_dkvwsys"
   description: "preferences.description.title"
   group: "basic"
+
+preference_url:
+  key: "url"
+  value: ""
+  description: "preferences.description.url"
+  group: "basic"
