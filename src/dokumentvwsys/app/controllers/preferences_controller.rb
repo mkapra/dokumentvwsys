@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 class PreferencesController < ApplicationController
+  include AdministrationHelper
+
+  before_action :authenticate_user!
+  before_action :verify_admin_user
+
   def index
     @preferences = Preference.all.group_by(&:group)
   end
