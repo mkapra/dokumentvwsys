@@ -3,7 +3,7 @@
     <div class="card card-signin my-5 card-body">
       <form class="form-signin">
         <div class="form-label-group">
-          <div class="center_div"><img src="/hi.png" id="icon" alt="User Icon"/></div>
+          <div class="center_div"><%= image_tag url_for(controller: '/preferences', action: 'logo') %></div>
           <%= f.label :username, t('label.username') %>
           <% if params[:username].nil? %>
             <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control" %>

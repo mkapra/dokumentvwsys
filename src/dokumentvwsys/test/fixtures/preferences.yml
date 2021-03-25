@@ -1,5 +1,10 @@
 preference_title:
   key: "title"
   value: "TEST_dkvwsys"
-  description: "preferences.description.title"
   group: "basic"
+
+preference_image:
+  key: "image"
+  is_file: true
+  file: <%= binary('test/fixtures/files/logo.png') %>
+  group: "appearance"

@@ -7,6 +7,7 @@ de:
     generate_username: "Benutzernamen generieren"
     login: "Einloggen"
     logout: "Ausloggen"
+    save: "Speichern"
   label:
     birth: "Geburtsdatum"
     delete_at: "Verfügbar bis"
@@ -16,6 +17,7 @@ de:
     last_name: "Nachname"
     password: "Passwort"
     pdf_file: "PDF-Datei"
+    png_file: "PNG-Datei"
     role: "Rolle"
     uploaded_at: "Hochgeladen am"
     user: "Person"

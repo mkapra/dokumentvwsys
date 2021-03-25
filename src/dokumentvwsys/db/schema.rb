@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_19_163306) do
+ActiveRecord::Schema.define(version: 2021_03_25_210322) do
 
   create_table "documents", force: :cascade do |t|
     t.binary "pdf", null: false
@@ -26,9 +26,10 @@ ActiveRecord::Schema.define(version: 2021_03_19_163306) do
     t.string "key"
     t.string "value"
     t.string "group"
-    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "is_file", default: false
+    t.binary "file"
   end
 
   create_table "roles", force: :cascade do |t|

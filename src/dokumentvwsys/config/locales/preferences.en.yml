@@ -1,6 +1,10 @@
 en:
   preferences:
+    description:
+      image: "Image that is userd for login and PDFs"
+      title: "Name of the application"
     group:
+      appearance: "Appearance"
       basic: "Basic configuration"
     key:
       title: "Name of the application"

@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   resources :preferences
   resources :administration, only: %i[index new edit destroy]
+  
+  resources :preferences do
+    get 'logo', to: 'preferences#logo', on: :collection, as: 'logo'
+  end
 
   get 'documents/all', to: 'documents#all'
   resources :documents

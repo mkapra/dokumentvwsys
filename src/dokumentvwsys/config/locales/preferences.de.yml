@@ -1,6 +1,8 @@
 de:
   preferences:
     description:
+      image: "Bild das für die Login Seite und das PDF benutzt wird"
       title: "Name der Applikation"
     group:
+      appearance: "Darstellung"
       basic: "Grundkonfiguration"
