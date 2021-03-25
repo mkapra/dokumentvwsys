@@ -1,6 +1,4 @@
 de:
   message:
-    error:
-      save_settings: "Fehler beim Speichern der Einstellung!"
     success:
       save_settings: "Einstellung erfolgreich gespeichert!"

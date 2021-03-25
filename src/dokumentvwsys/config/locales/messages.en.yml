@@ -1,6 +1,4 @@
 en:
   message:
-    error:
-      save_settings: "Error while saving settings!"
     success:
       save_settings: "Setting saved successfully!"
