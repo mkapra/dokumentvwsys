@@ -1,9 +1,9 @@
 en:
   role:
     admin: "Administrator"
-    uploader: "Uploader"
-    user: "User"
     description:
       admin: "May create/edit/delete users and upload/delete documents"
       uploader: "May upload and delete documents"
       user: "May download documents. This is the default value"
+    uploader: "Uploader"
+    user: "User"

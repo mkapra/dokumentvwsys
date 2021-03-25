@@ -1,14 +1,14 @@
 en:
+  headings:
+    administration_index: "Administrationpanel"
+    all_documents: "All Documents"
+    new_document: "Upload new Document"
+    new_user: "Create new User"
+    preferences: "Settings"
   navbar:
     administration: "Administration"
+    all_documents: "All Documents"
     new_document: "New Document"
     new_user: "New User"
     overview: "Overview over users"
     startpage: "Startpage"
-    all_documents: "All Documents"
-  headings:
-    new_document: "Upload new Document"
-    administration_index: "Administrationpanel"
-    new_user: "Create new User"
-    preferences: "Settings"
-    all_documents: "All Documents"
