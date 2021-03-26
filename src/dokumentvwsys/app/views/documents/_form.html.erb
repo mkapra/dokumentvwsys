@@ -16,7 +16,10 @@
     <%= form.file_field :pdf, class: 'custom-file-input' %>
   </div>
 
-  <%= form.submit t('button.create_document'), class: "btn btn-primary mt-3" %>
+  <div class="form-group">
+    <%= form.submit t('button.create_document'), class: "btn btn-primary mb-2" %>
+  </div>
+
   <datalist id="names">
     <% User.all.each do |user| %>
       <option value="<%= user %>">
