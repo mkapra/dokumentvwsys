@@ -1,13 +1,17 @@
 # frozen_string_literal: true
 
 class DocumentsController < ApplicationController
+  include AdministrationHelper
+
   before_action :authenticate_user!
   before_action :set_document, only: %i[show edit update destroy]
+  before_action :verify_admin_user, only: 'all'
+
   add_flash_types :errors
 
   def all
     @delete = true
-    @documents = Document.all.order('user_id desc') if current_user.admin?
+    @documents = Document.all.order('user_id desc')
   end
 
   def index
@@ -18,13 +22,9 @@ class DocumentsController < ApplicationController
   def show
     @document = Document.find(params[:id])
 
-    return redirect_to :root unless @document.user == current_user || current_user.admin?
+    return redirect_to errors_not_found_path unless @document.user == current_user || current_user.admin?
 
-    if @document.filename.include? '.pdf'
-      send_data(@document.pdf, type: 'application/pdf', filename: @document.filename)
-    else
-      send_data(@document.pdf, type: 'application/pdf', filename: "#{@document.filename}.pdf")
-    end
+    send_data(@document.pdf, type: 'application/pdf', filename: get_filename(@document.filename))
   end
 
   def new

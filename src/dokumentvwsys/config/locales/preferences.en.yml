@@ -1,7 +1,8 @@
 en:
   preferences:
-    description:
-      title: "Name of the application"
-      url: "Base domain of the homepage"
     group:
+      appearance: "Appearance"
       basic: "Basic configuration"
+    key:
+      title: "Name of the application"
+      image: "Image that is used for login and PDFs"

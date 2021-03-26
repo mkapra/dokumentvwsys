@@ -1,7 +1,9 @@
 de:
   preferences:
     description:
+      image: "Bild das für die Login Seite und das PDF benutzt wird"
       title: "Name der Applikation"
       url: "Basis Domain für die Homepage"
     group:
+      appearance: "Darstellung"
       basic: "Grundkonfiguration"
