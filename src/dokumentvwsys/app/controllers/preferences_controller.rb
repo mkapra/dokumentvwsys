@@ -3,8 +3,8 @@
 class PreferencesController < ApplicationController
   include AdministrationHelper
 
-  before_action :authenticate_user!
-  before_action :verify_admin_user
+  before_action :authenticate_user!, only: %i[index update]
+  before_action :verify_admin_user, only: %i[index update]
 
   def index
     @preferences = Preference.all.group_by(&:group)
