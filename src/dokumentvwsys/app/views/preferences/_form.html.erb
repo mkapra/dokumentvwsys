@@ -11,6 +11,8 @@
         <%= f.label :file, t('label.png_file'), class: 'custom-file-label' %>
         <%= f.file_field :file, class: 'custom-file-input' %>
       </div>
+    <% elsif preference.is_textarea %>
+      <%= f.text_area :value, rows: 10, class: 'form-control' %>
     <% else %>
       <%= f.label :value, 'Value', class: 'sr-only' %>
       <%= f.text_field :value, value: preference.value, class: "form-control" %>

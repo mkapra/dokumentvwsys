@@ -3,8 +3,11 @@ en:
     description:
       image: "Image that is userd for login and PDFs"
       title: "Name of the application"
+      footer: "Text that is displayed in the lower left area of the website"
     group:
       appearance: "Appearance"
       basic: "Basic configuration"
     key:
       title: "Name of the application"
+
+
