@@ -1,7 +1,7 @@
 PROGRAM_TITLE = 'dokumentvwsys'
 
-FOOTER_DEFAULT_TEXT = <<EOF
-dokumentvwsys ist ein System zur Bereitstellung von Dokumenten.
+FOOTER_DEFAULT_TEXT = <<~EOF
+  dokumentvwsys ist ein System zur Bereitstellung von Dokumenten.
 EOF
 
 # Add preferences
