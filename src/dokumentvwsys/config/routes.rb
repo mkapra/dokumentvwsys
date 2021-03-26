@@ -16,8 +16,6 @@ Rails.application.routes.draw do
   get 'documents/all', to: 'documents#all'
   resources :documents
 
-  # get 'registration/pdf/:id', to: 'registration#pdf', as: 'pdf_registration'
-
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
