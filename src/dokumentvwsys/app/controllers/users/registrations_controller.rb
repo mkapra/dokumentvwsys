@@ -17,12 +17,12 @@ module Users
       params[:user][:password] = password
       params[:user][:password_confirmation] = password
       new_user = User.new(user_params)
-      unless new_user.save
-        redirect_to new_administration_path, flash: { error: 'Error while creating the user' } and return
-      else
+      if new_user.save
         pdf = WickedPdf.new.pdf_from_string(pdf_string)
         send_data pdf, filename: "#{new_user.full_name.split(' ').join('_').downcase}.pdf", type: 'application/pdf'
-        #redirect_to new_administration_path, flash: { notice: t('message.notice.create_user') } and return
+        # redirect_to new_administration_path, flash: { notice: t('message.notice.create_user') } and return
+      else
+        redirect_to new_administration_path, flash: { error: 'Error while creating the user' } and return
       end
     end
 
