@@ -19,17 +19,10 @@ module Users
       new_user = User.new(user_params)
       return redirect_to new_administration_path, flash: { error: 'Error while creating the user' } unless new_user.save
 
-      pdf = WickedPdf.new.pdf_from_string(pdf_string)
-      send_data pdf, filename: "#{new_user.full_name.split(' ').join('_').downcase}.pdf", type: 'application/pdf'
-      # redirect_to new_administration_path, flash: { notice: t('message.notice.create_user') }
+      render pdf: 'login', template: 'devise/registrations/pdf.html.erb', disposition: 'attachment', encoding: 'utf-8'
     end
 
     protected
-
-    def pdf_string
-      render_to_string(template: 'devise/registrations/pdf.html.erb', encoding: 'utf8', disposition: 'attachment',
-                       page_size: 'A4', layout: false)
-    end
 
     def user_params
       params.require(:user).permit(:username, :first_name, :last_name, :birth, :password, :password_confirmation,

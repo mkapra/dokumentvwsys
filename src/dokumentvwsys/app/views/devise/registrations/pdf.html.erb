@@ -1,15 +1,21 @@
-<html>
+<!doctype html>
+<html lang="de">
   <head>
     <title><%= "#{params[:user][:first_name]} #{params[:user][:last_name]}" %></title>
     <%= wicked_pdf_stylesheet_link_tag 'application' %>
     <%= wicked_pdf_javascript_include_tag 'number_pages' %>
-  <head>
+  </head>
   <body>
     <div id="content">
-      <h1><%= "#{params[:user][:first_name]} #{params[:user][:last_name]}" %></h1></br></br>
-      <h2>Zugangsdaten für das Portal <%= Preference.find_by(:key == :url).value %></h2></br></br>
-      <p>Dies sind Ihre Zugangsdaten für das Portal:</p></br>
-      <table style="width:100%">
+      <p>
+        Für:<br>
+        <b><%= "#{params[:user][:first_name]} #{params[:user][:last_name]}" %></b>
+      </p><br><br>
+
+      <h2>Zugangsdaten für das Portal <%= Preference.find_by(:key == :url).value %></h2><br><br>
+      <p>Dies sind Ihre Zugangsdaten für das Portal:</p><br>
+
+      <table style="width: 80%">
         <tr>
           <th><%= t('label.username') %></th>
           <th><%= params[:user][:username] %></th>
