@@ -11,16 +11,16 @@
       <p>Dies sind Ihre Zugangsdaten für das Portal:</p></br>
       <table style="width:100%">
         <tr>
-          <th><%= t('registration.username') %></th>
+          <th><%= t('label.username') %></th>
           <th><%= params[:user][:username] %></th>
         </tr>
         <tr>
-          <th><%= t('registration.password') %></th>
+          <th><%= t('label.password') %></th>
           <th><%= params[:user][:password] %></th>
         </tr>
         <tr>
-          <th><%= t('registration.url') %></th>
-          <th><%= Preference.find_by(:key == :url).value %></th>
+          <th><%= t('label.url') %></th>
+          <th><%= Preference.find_by(:key == :url).to_s %></th>
         </tr>
       </table>
     </div>

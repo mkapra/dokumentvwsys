@@ -3,6 +3,7 @@ en:
     group:
       appearance: "Appearance"
       basic: "Basic configuration"
+      url: "Basic domain for homepage"
     key:
       title: "Name of the application"
       image: "Image that is used for login and PDFs"
