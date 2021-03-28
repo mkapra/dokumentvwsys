@@ -8,3 +8,9 @@ preference_image:
   is_file: true
   file: <%= binary('test/fixtures/files/logo.png') %>
   group: "appearance"
+
+preference_footer:
+  key: "footer"
+  value: "dokumentvwsys ist ein System zur Bereitstellung von Dokumenten."
+  is_textarea: true
+  group: "appearance"
