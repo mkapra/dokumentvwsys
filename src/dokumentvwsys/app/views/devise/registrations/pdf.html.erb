@@ -12,7 +12,7 @@
         <b><%= "#{params[:user][:first_name]} #{params[:user][:last_name]}" %></b>
       </p><br><br>
 
-      <h2>Zugangsdaten für das Portal <%= Preference.find_by(:key == :url).value %></h2><br><br>
+      <h2>Zugangsdaten für das Portal <%= Preference.find_by(:key == :url) %></h2><br><br>
       <p>Dies sind Ihre Zugangsdaten für das Portal:</p><br>
 
       <table style="width: 80%">
