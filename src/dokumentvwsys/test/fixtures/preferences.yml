@@ -3,6 +3,11 @@ preference_title:
   value: "TEST_dkvwsys"
   group: "basic"
 
+preference_url:
+  key: "url"
+  value: ""
+  group: "basic"
+
 preference_image:
   key: "image"
   is_file: true

@@ -3,6 +3,7 @@ de:
     description:
       image: "Bild das für die Login Seite und das PDF benutzt wird"
       title: "Name der Applikation"
+      url: "Basis Domain für die Homepage"
       footer: "Text der im unteren linken Bereich der Website angezeigt wird"
     group:
       appearance: "Darstellung"

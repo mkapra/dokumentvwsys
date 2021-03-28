@@ -14,13 +14,15 @@ module Users
     def create
       password_length = 8
       password = Devise.friendly_token.first(password_length)
-      puts "PASSWORD IS: #{password}"
       params[:user][:password] = password
       params[:user][:password_confirmation] = password
       new_user = User.new(user_params)
-      return redirect_to new_administration_path, flash: { error: 'Error while creating the user' } unless new_user.save
 
-      redirect_to new_administration_path, flash: { notice: t('message.notice.create_user') }
+      if new_user.save
+        return render pdf: 'login', template: "devise/registrations/pdf.html.erb", disposition: 'attachment', encoding: 'utf-8'
+      end
+
+      redirect_to new_administration_path, flash: { error: 'Error while creating the user' } and return
     end
 
     protected

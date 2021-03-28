@@ -11,3 +11,13 @@ require bootstrap-datepicker
 .card {
   margin-bottom: 10px;
 }
+
+table, td, th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+thead, tfoot {
+  background-color: #333;
+  color: #fff;
+}

@@ -22,5 +22,6 @@ en:
     uploaded_at: "Uploaded on"
     user: "Person"
     username: "Username"
+    url: "Link"
   placeholder:
     name: "Name"

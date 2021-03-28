@@ -6,6 +6,7 @@ EOF
 
 # Add preferences
 Preference.create(key: 'title', value: PROGRAM_TITLE, group: 'basic')
+Preference.create(key: 'url', value: '', group: 'basic')
 Preference.create(key: 'image', is_file: true, group: 'basic') # TODO: Add default image #7
 Preference.create(key: 'footer', textarea: FOOTER_DEFAULT_TEXT, is_textarea: true, group: 'appearance')
 
