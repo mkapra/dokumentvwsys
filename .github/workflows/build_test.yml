@@ -61,7 +61,7 @@ jobs:
         uses: hmarr/auto-approve-action@v2.1.0
         with:
           github-token: "${{ github.token }}"
-      - name: auto-merge
-        uses: tjenkinson/gh-action-auto-merge-dependency-updates@v1
+      - name: Merge dependabot PRs
+        uses: ridedott/merge-me-action@v2
         with:
-          allowed-actors: dependabot-preview[bot], dependabot[bot]
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
