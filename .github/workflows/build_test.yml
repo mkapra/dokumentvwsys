@@ -62,6 +62,6 @@ jobs:
         with:
           github-token: "${{ github.token }}"
       - name: Merge dependabot PRs
-        uses: ridedott/merge-me-action@v2
+        uses: ridedott/merge-me-action@v2.6.7
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
