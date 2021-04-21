@@ -53,6 +53,13 @@ jobs:
   #      run: |
   #        cd dokumentvwsys
   #        bundle exec rake test
+  auto-approve:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: hmarr/auto-approve-action@v2
+      if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
+      with:
+        github-token: "${{ secrets.GITHUB_TOKEN }}"
   auto-merge:
     runs-on: ubuntu-latest
     steps:
