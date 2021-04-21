@@ -1,4 +1,4 @@
-name: 'Tests (and automerge for debendabot changes)'
+name: 'CI'
 on:
   pull_request:
   push:
