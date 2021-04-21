@@ -53,15 +53,10 @@ jobs:
   #      run: |
   #        cd dokumentvwsys
   #        bundle exec rake test
-  automerge:
+  auto-merge:
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     steps:
-      - name: auto-approve
-        uses: hmarr/auto-approve-action@v2.1.0
+      - uses: actions/checkout@v2
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2
         with:
-          github-token: "${{ github.token }}"
-      - name: Merge dependabot PRs
-        uses: ridedott/merge-me-action@v2
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
