@@ -11,7 +11,7 @@ updates:
     schedule:
       interval: "daily"
   # Updates for javascript
-  - package-ecosystem: "javascript"
+  - package-ecosystem: "npm"
     directory: "/src/dokumentvwsys"
     schedule:
       interval: "daily"
