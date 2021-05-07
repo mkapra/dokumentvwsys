@@ -5,17 +5,17 @@
 
 global.toastr = require("toastr");
 
-import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
-import * as ActiveStorage from "@rails/activestorage"
-import "channels"
-import '@popperjs/core';
+import Rails from "@rails/ujs";
+import Turbolinks from "turbolinks";
+import * as ActiveStorage from "@rails/activestorage";
+import "channels";
+import "@popperjs/core";
 
-Rails.start()
-Turbolinks.start()
-ActiveStorage.start()
+Rails.start();
+Turbolinks.start();
+ActiveStorage.start();
 
-import bootstrap from "bootstrap"
+import bootstrap from "bootstrap";
 
 require("bootstrap-datepicker");
 require("bootstrap-datepicker/dist/locales/bootstrap-datepicker.de.min.js");
