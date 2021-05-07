@@ -18,7 +18,7 @@ module ApplicationHelper
   end
 
   def navbar_dropdown_item(label, path)
-    link_to t("navbar.#{label}"), path, class: 'nav-link'
+    "<li>#{link_to t("navbar.#{label}"), path, class: 'dropdown-item'}</li>".html_safe
   end
 
   def inline_help(help_text, object_name, method)
