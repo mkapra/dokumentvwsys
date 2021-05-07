@@ -1,28 +1,26 @@
 <%= form_for(@user, url: user_registration_path) do |f| %>
-  <div class="form-group">
+  <div class="mb-3">
     <%= f.label :first_name, t('label.first_name') %>
     <%= f.text_field :first_name, autofocus: true, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="mb-3">
     <%= f.label :last_name, t('label.last_name') %>
     <%= f.text_field :last_name, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="mb-3">
     <%= f.label :username, t('label.username') %>
-    <div class="row">
-      <div class="col-9">
-        <%= f.text_field :username, autocomplete: "username", class: "form-control" %>
-      </div>
-      <div class="col-3">
-        <button type="button" class="btn btn-outline-dark" onclick="generateUsername()"><%= t('button.generate_username') %></button>
-      </div>
+
+    <div class="input-group">
+      <%= f.text_field :username, autocomplete: "username", class: "form-control", aria: { describedby: 'button-addon' } %>
+      <button type="button" id="button-addon" class="btn btn-outline-dark" onclick="generateUsername()"><%= t('button.generate_username') %></button>
     </div>
+
     <%= inline_help t('help.generate_username'), f.object_name, :username %>
   </div>
 
-  <div class="form-group">
+  <div class="mb-3">
     <%= f.label :email, t('label.email') %>
     <div class="input-group">
       <div class="input-group-prepend">
@@ -32,17 +30,17 @@
     </div>
   </div>
 
-  <div class="form-group">
+  <div class="mb-3">
     <%= f.label :birth, t('label.birth') %>
     <%= f.date_select :birth, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="mb-3">
     <%= f.label :role, t('label.role') %>
-    <%= f.collection_select :role_id, Role.all, :id, :translated, { selected: Role.where(name: "user").first.id }, { class: 'form-control' } %>
+    <%= f.collection_select :role_id, Role.all, :id, :translated, { selected: Role.where(name: "user").first.id, aria: {label: "Test"} }, { class: 'form-select' } %>
   </div>
 
-  <div class="form-group">
+  <div class="mb-3">
     <%= f.submit t('button.create_user'), class: 'btn btn-primary' %>
   </div>
 <% end %>
