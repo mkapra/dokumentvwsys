@@ -1,18 +1,29 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
 <% @documents.each do |document| %>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title"><%= get_filename(document.filename) %></h5>
-      <p class="card-text">
-        <b><%= t('label.uploaded_at') %></b>: <%= document.created_at.strftime("%d.%m.%Y") %> <br>
-        <b><%= t('label.delete_at') %></b>: <%= document.delete_at.strftime("%d.%m.%Y") %> <br>
-        <% if @delete %>
-          <b><%= t('label.user') %></b>: <%= document.user.full_name %>
-        <% end %>
-      </p>
-      <%= link_to t('button.download'), document, class: 'card-link' %>
-      <% if @delete %>
-        <%= link_to t('button.delete'), document, method: 'delete', class: 'card-link' %>
-      <% end %>
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <%= get_filename(document.filename) %>
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          <b><%= t('label.uploaded_at') %></b>: <%= document.created_at.strftime("%d.%m.%Y") %> <br>
+          <b><%= t('label.delete_at') %></b>: <%= document.delete_at.strftime("%d.%m.%Y") %> <br>
+          <% if @delete %>
+            <b><%= t('label.user') %></b>: <%= document.user.full_name %>
+          <% end %>
+        </p>
+      </div>
+      <div class="card-footer">
+        <div class="btn-group" role="group">
+          <%= button_to t('button.download'), document, class: 'btn btn-primary' %>
+
+          <% if @delete %>
+            <%= button_to t('button.delete'), document, method: 'delete', class: 'btn btn-outline-danger' %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 <% end %>
+</div>

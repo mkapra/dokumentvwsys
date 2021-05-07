@@ -1,35 +1,43 @@
 <% content_for :title, t('headings.administration_index') %>
 
-<%= form_tag new_administration_path, method: 'get', class: 'form-inline' do %>
-  <div class="form-group mb-2">
-    <%= label_tag :user, "Search", class: "sr-only" %>
-    <%= text_field_tag :user, nil, placeholder: t('placeholder.name'), class: "form-control mr-2", id: "searchUser", onkeyup: "filter_names()" %>
+<%= form_tag new_administration_path, method: 'get', class: 'form-inline row gy-2 gx-3 mb-3' do %>
+  <div class="col">
+    <%= text_field_tag :user, nil, placeholder: t('placeholder.name_search'), class: "form-control", id: "searchUser", onkeyup: "filter_names()" %>
   </div>
-  <%= submit_tag t('navbar.new_user'), class: "btn btn-primary mb-2" %>
+
+  <div class="col-2">
+    <%= submit_tag t('navbar.new_user'), class: "btn btn-primary" %>
+  </div>
 <% end %>
 
-<% @users.each do |user| %>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title"><%= user.full_name %></h5>
-      <p class="card-text">
-        Benutzername: <%= user.username %> <br>
-        E-Mail: <%= user.email %> <br>
-        Geburtsdatum: <%= user.birth.strftime("%d.%m.%Y") %> <br>
-      </p>
-      <%= link_to 'Edit', edit_administration_path(user.id), class: 'card-link' %>
-      <% if user != current_user %>
-        <%= link_to 'Delete', administration_path(user.id), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-link' %>
-      <% end %>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% @users.each do |user| %>
+    <div class="col">
+      <div class="card">
+        <h5 class="card-header"><%= user.full_name %></h5>
+        <div class="card-body">
+          <p class="card-text">
+            <b>Benutzername</b>: <%= user.username %> <br>
+            <b>E-Mail</b>: <%= user.email %> <br>
+            <b>Geburtsdatum</b>: <%= user.birth.strftime("%d.%m.%Y") %> <br>
+          </p>
+        </div>
+        <div class="card-footer">
+          <%= link_to 'Edit', edit_administration_path(user.id), class: 'card-link' %>
+          <% if user != current_user %>
+            <%= link_to 'Delete', administration_path(user.id), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-link' %>
+          <% end %>
+        </div>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
 
 <% content_for :javascript do %>
   function filter_names() {
     input = document.getElementById('searchUser').value.toUpperCase();
     Array.prototype.forEach.call(document.getElementsByClassName('card'), function(card) {
-      heading = card.getElementsByClassName('card-body')[0].getElementsByClassName('card-title')[0].innerHTML;
+      heading = card.getElementsByClassName('card-header')[0].innerHTML;
       if (heading && heading.toUpperCase().includes(input)) {
         card.style.display = "";
       } else {

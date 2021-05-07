@@ -18,10 +18,10 @@ module ApplicationHelper
   end
 
   def navbar_dropdown_item(label, path)
-    link_to t("navbar.#{label}"), path, class: 'nav-link'
+    "<li>#{link_to t("navbar.#{label}"), path, class: 'dropdown-item'}</li>".html_safe
   end
 
   def inline_help(help_text, object_name, method)
-    content_tag :small, help_text, class: "help-inline", id: "#{object_name}_#{method}_inline"
+    content_tag :small, help_text, class: 'form-text', id: "#{object_name}_#{method}_inline"
   end
 end
