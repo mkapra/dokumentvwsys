@@ -24,4 +24,4 @@ en:
     username: "Username"
     url: "Link"
   placeholder:
-    name: "Name"
+    name_search: "Search name..."
