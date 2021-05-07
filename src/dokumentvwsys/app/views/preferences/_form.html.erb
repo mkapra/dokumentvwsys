@@ -1,25 +1,25 @@
 <%= form_for preference, html: { class: 'row' } do |f| %>
   <%= f.text_field :key, value: preference.key, hidden: true %>
 
-  <div class="col-5 input-group mb-2">
-    <%= f.text_field :description, value: t("preferences.description.#{preference.key}", default: preference.key), class: 'form-control', readonly: true %>
-  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <%= f.text_field :description, value: t("preferences.description.#{preference.key}", default: preference.key), class: 'form-control', readonly: true %>
+    </div>
 
-  <div class="col-5 input-group mb-2">
-    <% if preference.is_file %>
-      <div class="custom-file">
-        <%= f.label :file, t('label.png_file'), class: 'custom-file-label' %>
-        <%= f.file_field :file, class: 'custom-file-input' %>
-      </div>
-    <% elsif preference.is_textarea %>
-      <%= f.text_area :value, rows: 10, class: 'form-control' %>
-    <% else %>
-      <%= f.label :value, 'Value', class: 'sr-only' %>
-      <%= f.text_field :value, value: preference.value, class: "form-control" %>
-    <% end %>
-  </div>
+    <div class="col">
+      <% if preference.is_file %>
+        <div class="input-group">
+          <%= f.file_field :pdf, class: 'form-control' %>
+        </div>
+      <% elsif preference.is_textarea %>
+        <%= f.text_area :value, rows: 10, class: 'form-control' %>
+      <% else %>
+        <%= f.text_field :value, value: preference.value, class: "form-control" %>
+      <% end %>
+    </div>
 
-  <div class="col mb-2">
-    <%= f.submit t('button.save'), class: 'btn btn-primary' %>
+    <div class="col-1 d-grid">
+      <%= f.submit t('button.save'), class: 'btn btn-outline-success' %>
+    </div>
   </div>
 <% end %>
