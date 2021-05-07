@@ -22,8 +22,6 @@ require("bootstrap-datepicker/dist/locales/bootstrap-datepicker.de.min.js");
 
 import bsCustomFileInput from "bs-custom-file-input";
 
-$(document).ready(function () {
-  bsCustomFileInput.init();
-});
+$(document).ready(function() { bsCustomFileInput.init(); });
 
 $.fn.datepicker.defaults.language = "de";
