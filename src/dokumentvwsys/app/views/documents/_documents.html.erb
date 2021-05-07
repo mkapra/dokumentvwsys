@@ -16,7 +16,7 @@
       </div>
       <div class="card-footer">
         <div class="btn-group" role="group">
-          <%= button_to t('button.download'), document, class: 'btn btn-primary' %>
+          <%= button_to t('button.download'), document, method: 'get', class: 'btn btn-primary' %>
 
           <% if @delete %>
             <%= button_to t('button.delete'), document, method: 'delete', class: 'btn btn-outline-danger' %>

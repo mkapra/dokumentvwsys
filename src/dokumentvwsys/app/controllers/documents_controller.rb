@@ -2,6 +2,7 @@
 
 class DocumentsController < ApplicationController
   include AdministrationHelper
+  include DocumentsHelper
 
   before_action :authenticate_user!
   before_action :set_document, only: %i[show edit update destroy]
