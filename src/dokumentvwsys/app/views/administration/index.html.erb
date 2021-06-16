@@ -23,7 +23,7 @@
           </p>
         </div>
         <div class="card-footer">
-          <%= link_to 'Edit', edit_administration_path(user.id), class: 'card-link' %>
+          <%#= link_to 'Edit', edit_administration_path(user.id), class: 'card-link' %>
           <% if user != current_user %>
             <%= link_to 'Delete', administration_path(user.id), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-link' %>
           <% end %>

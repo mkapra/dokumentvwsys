@@ -21,7 +21,9 @@ class AdministrationController < ApplicationController
                       end
   end
 
-  def edit; end
+  def edit
+    raise ActionController::RoutingError, 'Not found'
+  end
 
   def destroy
     if params[:id].to_i == current_user.id
