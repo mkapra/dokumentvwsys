@@ -5,6 +5,9 @@ de:
       title: "Name der Applikation"
       url: "Basis Domain für die Homepage"
       footer: "Text der im unteren linken Bereich der Website angezeigt wird"
+      imprint: "Impressum der Website"
+      privacy_policy: "Datenschutzerklärung der Website"
     group:
       appearance: "Darstellung"
       basic: "Grundkonfiguration"
+      legal: "Rechtliches"

@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'legal/imprint'
+  get 'legal/privacy_policy'
+
   get 'errors/not_found'
   get 'errors/internal_server_error'
 

@@ -5,6 +5,8 @@ de:
     new_document: "Neues Dokument hochladen"
     new_user: "Neuen Benutzer erstellen"
     preferences: "Einstellungen"
+    imprint: "Impressum"
+    privacy_policy: "Datenschutzerklärung"
   navbar:
     administration: "Administration"
     all_documents: "Alle Dokumente"

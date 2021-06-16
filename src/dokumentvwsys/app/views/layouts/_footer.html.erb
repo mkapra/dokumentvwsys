@@ -30,7 +30,9 @@
 
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.03);">
       © <%= Time.current.year %> Copyright:
-      <a class="text-dark" href="https://maximilian.kapra.de">Maximilian Kapra</a>
+      <a class="text-dark" href="https://maximilian.kapra.de">Maximilian Kapra</a> |
+      <%= link_to I18n.t('headings.imprint'), legal_imprint_path, class: 'text-dark' %> |
+      <%= link_to I18n.t('headings.privacy_policy'), legal_privacy_policy_path, class: 'text-dark' %>
     </div>
   </footer>
 <% end %>

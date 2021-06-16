@@ -4,6 +4,8 @@ en:
       image: "Image that is userd for login and PDFs"
       title: "Name of the application"
       footer: "Text that is displayed in the lower left area of the website"
+      imprint: "Imprint of your website"
+      privacy_policy: "Privacy Policy of your website"
     group:
       appearance: "Appearance"
       basic: "Basic configuration"
@@ -11,3 +13,4 @@ en:
     key:
       title: "Name of the application"
       image: "Image that is used for login and PDFs"
+      legal: "Legal"
