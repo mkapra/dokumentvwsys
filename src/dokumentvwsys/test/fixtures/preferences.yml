@@ -19,3 +19,15 @@ preference_footer:
   value: "dokumentvwsys ist ein System zur Bereitstellung von Dokumenten."
   is_textarea: true
   group: "appearance"
+
+impressum:
+  key: "imprint"
+  value: "Test Imprint"
+  is_textarea: true
+  group: "legal"
+
+privacy_policy:
+  key: "privacy_policy"
+  value: "Test Privacy Policy"
+  is_textarea: true
+  group: "legal"

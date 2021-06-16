@@ -9,6 +9,7 @@ Preference.create(key: 'title', value: PROGRAM_TITLE, group: 'basic')
 Preference.create(key: 'url', value: '', group: 'basic')
 Preference.create(key: 'image', is_file: true, group: 'basic') # TODO: Add default image #7
 Preference.create(key: 'footer', textarea: FOOTER_DEFAULT_TEXT, is_textarea: true, group: 'appearance')
+Preference.create(key: 'imprint', value: 'Test Imprint', is_textarea: true, group: 'legal')
 
 Role.create(name: 'admin')
 Role.create(name: 'uploader')
