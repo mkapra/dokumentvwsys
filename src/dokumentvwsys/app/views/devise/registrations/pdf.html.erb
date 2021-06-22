@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
   <head>
-    <title><%= "#{@user[:first_name]} #{@user[:last_name]}" %></title>
+    <title><%= "#{@user.first_name} #{@user.last_name}" %></title>
     <%= wicked_pdf_stylesheet_link_tag 'application' %>
     <%= wicked_pdf_javascript_include_tag 'number_pages' %>
   </head>
@@ -9,7 +9,7 @@
     <div id="content">
       <p>
         Für:<br>
-        <b><%= "#{@user[:first_name]} #{@user[:last_name]}" %></b>
+        <b><%= "#{@user.first_name} #{@user.last_name}" %></b>
       </p><br><br>
 
       <h2>Zugangsdaten für das Portal <%= Preference.where(key: 'url').first %></h2><br><br>
@@ -18,7 +18,7 @@
       <table style="width: 80%">
         <tr>
           <th><%= t('label.username') %></th>
-          <th><%= @user[:username] %></th>
+          <th><%= @user.username %></th>
         </tr>
         <tr>
           <th><%= t('label.password') %></th>
