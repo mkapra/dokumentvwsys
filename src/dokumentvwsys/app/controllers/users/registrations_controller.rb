@@ -19,9 +19,9 @@ module Users
       new_user = User.new(user_params)
 
       if new_user.save
-        redirect_to new_administration_path, flash: { notice: 'The user was created successfully' } and return
+        return redirect_to new_administration_path, flash: { notice: 'The user was created successfully' }
       else
-        redirect_to new_administration_path, flash: { error: 'Error while creating the user' } and return
+        return redirect_to new_administration_path, flash: { error: 'Error while creating the user' }
       end
     end
 
