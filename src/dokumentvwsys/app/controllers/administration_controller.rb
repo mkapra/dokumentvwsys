@@ -25,6 +25,28 @@ class AdministrationController < ApplicationController
     raise ActionController::RoutingError, 'Not found'
   end
 
+  def show
+    @user = User.find(params[:id])
+    password_length = 8
+    password = Devise.friendly_token.first(password_length)
+    @user.password = password
+    @user.password_confirmation = password
+    @user.save!
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: 'login',
+        template: "devise/registrations/pdf.html.erb",
+        disposition: 'attachment',
+        encoding: 'utf-8',
+        locals: {password: password}
+      end
+    end
+    @user.downloaded = true
+    @user.save!
+  end
+
   def destroy
     if params[:id].to_i == current_user.id
       return redirect_to administration_index_path,

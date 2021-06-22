@@ -19,10 +19,10 @@ module Users
       new_user = User.new(user_params)
 
       if new_user.save
-        return render pdf: 'login', template: "devise/registrations/pdf.html.erb", disposition: 'attachment', encoding: 'utf-8'
+        redirect_to new_administration_path, flash: { notice: 'The user was created successfully' } and return
+      else
+        redirect_to new_administration_path, flash: { error: 'Error while creating the user' } and return
       end
-
-      redirect_to new_administration_path, flash: { error: 'Error while creating the user' } and return
     end
 
     protected
