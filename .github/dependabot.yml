@@ -5,13 +5,19 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: '⬆️'
   # Updates for ruby gems
   - package-ecosystem: "bundler"
     directory: "/src/dokumentvwsys"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: '⬆️'
   # Updates for javascript
   - package-ecosystem: "npm"
     directory: "/src/dokumentvwsys"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: '⬆️'
