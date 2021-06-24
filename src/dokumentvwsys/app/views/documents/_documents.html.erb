@@ -1,4 +1,8 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
+<% if @documents.empty? %>
+  <p><%= I18n.t('message.notice.no_file') %></p>
+<% end %>
+
 <% @documents.each do |document| %>
   <div class="col">
     <div class="card">

@@ -13,5 +13,6 @@ en:
     notice:
       create_user: "User created successfully!"
       delete_user: "User deleted successfully!"
+      no_file: "Currently there are no documents available for you."
     success:
       save_settings: "Setting saved successfully!"

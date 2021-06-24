@@ -13,5 +13,6 @@ de:
     notice:
       create_user: "Benutzer erfolgreich erstellt!"
       delete_user: "Benutzer erfolgreich gelöscht!"
+      no_file: "Derzeit liegen keine Dokumente für Sie vor."
     success:
       save_settings: "Einstellung erfolgreich gespeichert!"
