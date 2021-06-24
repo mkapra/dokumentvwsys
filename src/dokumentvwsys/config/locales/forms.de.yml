@@ -1,5 +1,6 @@
 de:
   button:
+    access_download: "Zugangsdaten erstellen"
     create_document: "Dokument hochladen"
     create_user: "Benutzer erstellen"
     delete: "Löschen"
@@ -7,6 +8,7 @@ de:
     generate_username: "Benutzernamen generieren"
     login: "Einloggen"
     logout: "Ausloggen"
+    reset_password: "Zugangsdaten neu generieren"
     save: "Speichern"
   label:
     birth: "Geburtsdatum"

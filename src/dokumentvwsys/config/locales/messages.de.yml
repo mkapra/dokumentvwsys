@@ -14,5 +14,6 @@ de:
       create_user: "Benutzer erfolgreich erstellt!"
       delete_user: "Benutzer erfolgreich gelöscht!"
       no_file: "Derzeit liegen keine Dokumente für Sie vor."
+      confirmation: "Sind Sie sich sicher?"
     success:
       save_settings: "Einstellung erfolgreich gespeichert!"

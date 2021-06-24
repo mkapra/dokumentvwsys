@@ -1,5 +1,6 @@
 en:
   button:
+    access_download: "Create login data"
     create_document: "Upload document"
     create_user: "Create user"
     delete: "Delete"
@@ -7,6 +8,7 @@ en:
     generate_username: "Generate username"
     login: "Log In"
     logout: "Log Out"
+    reset_password: "Create new password"
     save: "Save"
   label:
     birth: "Birth date"

@@ -14,5 +14,6 @@ en:
       create_user: "User created successfully!"
       delete_user: "User deleted successfully!"
       no_file: "Currently there are no documents available for you."
+      confirmation: "Are you sure?"
     success:
       save_settings: "Setting saved successfully!"

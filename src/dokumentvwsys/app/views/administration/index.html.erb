@@ -23,13 +23,13 @@
           </p>
         </div>
         <div class="card-footer">
-          <% pdf_button = "Download" %>
+          <% pdf_button = I18n.t('button.access_download') %>
           <% if user.downloaded == true %>
-            <% pdf_button = "Reset password" %>
+            <% pdf_button = I18n.t('button.reset_password') %>
           <% end %>
           <%#= link_to 'Edit', edit_administration_path(user.id), class: 'card-link' %>
           <% if user != current_user %>
-            <%= link_to 'Delete', administration_path(user.id), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-link' %>
+            <%= link_to administration_path(user.id), method: :delete, data: { confirm: I18n.t('message.notice.confirmation') }, class: 'card-link' do %> <%= icon('trash', class: "text-danger") %><% end %>
             <%= link_to pdf_button, administration_path(user.id, :format => 'pdf'), class: 'card-link' %>
           <% end %>
         </div>
