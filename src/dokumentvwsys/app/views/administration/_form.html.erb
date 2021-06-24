@@ -14,7 +14,7 @@
 
     <div class="input-group">
       <%= f.text_field :username, autocomplete: "username", class: "form-control", aria: { describedby: 'button-addon' } %>
-      <button type="button" id="button-addon" class="btn btn-outline-dark" onclick="generateUsername()"><%= t('button.generate_username') %></button>
+      <button type="button" id="button-addon" class="btn btn-primary" onclick="generateUsername()"><%= t('button.generate_username') %></button>
     </div>
 
     <%= inline_help t('help.generate_username'), f.object_name, :username %>
