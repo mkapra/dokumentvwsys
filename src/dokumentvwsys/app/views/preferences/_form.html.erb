@@ -9,7 +9,7 @@
     <div class="col">
       <% if preference.is_file %>
         <div class="input-group">
-          <%= f.file_field :pdf, class: 'form-control' %>
+          <%= f.file_field :file, class: 'form-control' %>
         </div>
       <% elsif preference.is_textarea %>
         <%= f.text_area :value, rows: 10, class: 'form-control' %>
