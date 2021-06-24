@@ -20,10 +20,10 @@
       </div>
       <div class="card-footer">
         <div class="btn-group" role="group">
-          <%= button_to t('button.download'), document, method: 'get', class: 'btn btn-primary' %>
+          <%= button_to document, method: 'get', class: 'btn' do %><%= icon('download', class: "text-primary") %><% end %>
 
           <% if @delete %>
-            <%= button_to t('button.delete'), document, method: 'delete', class: 'btn btn-outline-danger' %>
+            <%= button_to document, method: 'delete', class: 'btn' do %><%= icon('trash', class: "text-danger") %><% end %>
           <% end %>
         </div>
       </div>
