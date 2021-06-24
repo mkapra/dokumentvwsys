@@ -1,7 +1,7 @@
 <%= form_for(@document, :html => { multipart: true }) do |form| %>
   <div class="mb-3">
     <%= form.label :delete_at, t('label.delete_at') %>
-    <%= form.text_field :delete_at, "data-provide" => 'datepicker', class: "form-control", autocomplete: "off" %>
+    <%= form.select :delete_at, get_weeks, { selected: 2 }, { class: "form-control" } %>
   </div>
 
   <div class="mb-3">

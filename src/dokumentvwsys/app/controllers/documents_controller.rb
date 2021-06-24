@@ -56,12 +56,11 @@ class DocumentsController < ApplicationController
         t.user = user
       end
 
-      # TODO: Fix with #31
-      t.delete_at = Date.strptime(params[:document][:delete_at], '%d/%m/%Y')
+      t.delete_at = Date.today + document_params[:delete_at].to_i.week
     end
 
     if @document.save
-      redirect_to @document, notice: 'Document was created successfully'
+      redirect_to documents_path, notice: 'Document was created successfully'
     else
       render action: 'new', error: 'Error while creating document!'
     end

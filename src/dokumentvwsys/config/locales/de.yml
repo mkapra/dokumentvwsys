@@ -14,3 +14,6 @@ de:
     new_user: "Neuer Benutzer"
     overview: "Übersicht aller Benutzer"
     startpage: "Startseite"
+  week:
+    one: 'Woche'
+    other: 'Wochen'
