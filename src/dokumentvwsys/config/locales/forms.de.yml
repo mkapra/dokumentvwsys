@@ -27,3 +27,4 @@ de:
     url: "Link"
   placeholder:
     name_search: "Namen suchen..."
+    document_search: "Dokumentnamen suchen..."

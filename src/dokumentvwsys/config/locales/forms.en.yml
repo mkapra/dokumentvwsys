@@ -27,3 +27,4 @@ en:
     url: "Link"
   placeholder:
     name_search: "Search name..."
+    document_search: "Search documents..."
