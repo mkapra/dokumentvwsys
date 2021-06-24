@@ -7,7 +7,7 @@ class PreferencesController < ApplicationController
   before_action :verify_admin_user, only: %i[index update]
 
   def index
-    @preferences = Preference.all.group_by(&:group)
+    @preferences = Preference.all.group_by(&:group).sort
   end
 
   def update
