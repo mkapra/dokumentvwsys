@@ -26,7 +26,7 @@ class Addpreferences < ActiveRecord::Migration[6.1]
     end
 
     unless Preference.find_by_key 'message'
-      Preference.create! key: 'message', value: 'test', is_textarea: true,
+      Preference.create! key: 'message', value: '', is_textarea: true,
                          group: 'appearance'
     end
 
