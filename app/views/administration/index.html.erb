@@ -10,33 +10,29 @@
   </div>
 <% end %>
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <% @users.each do |user| %>
-    <div class="col">
-      <div class="card">
-        <h5 class="card-header"><%= user.full_name %></h5>
-        <div class="card-body">
-          <p class="card-text">
-            <b>Benutzername</b>: <%= user.username %> <br>
-            <b>E-Mail</b>: <%= user.email %> <br>
-            <b>Geburtsdatum</b>: <%= user.birth.strftime("%d.%m.%Y") %> <br>
-          </p>
-        </div>
-        <div class="card-footer">
-          <% pdf_button = I18n.t('button.access_download') %>
-          <% if user.downloaded == true %>
-            <% pdf_button = I18n.t('button.reset_password') %>
-          <% end %>
-          <%#= link_to 'Edit', edit_administration_path(user.id), class: 'card-link' %>
-          <% if user != current_user %>
-            <%= link_to administration_path(user.id), method: :delete, data: { confirm: I18n.t('message.notice.confirmation') }, class: 'card-link' do %> <%= icon('trash', class: "text-danger") %><% end %>
-            <%= link_to pdf_button, administration_path(user.id, :format => 'pdf'), class: 'card-link' %>
-          <% end %>
-        </div>
-      </div>
+<% @users.each do |user| %>
+  <div class="card mb-3">
+    <h5 class="card-header"><%= user.full_name %></h5>
+    <div class="card-body">
+      <p class="card-text">
+        <b>Benutzername</b>: <%= user.username %> <br>
+        <b>E-Mail</b>: <%= user.email %> <br>
+        <b>Geburtsdatum</b>: <%= user.birth.strftime("%d.%m.%Y") %> <br>
+      </p>
     </div>
-  <% end %>
-</div>
+    <div class="card-footer">
+      <% pdf_button = I18n.t('button.access_download') %>
+      <% if user.downloaded == true %>
+        <% pdf_button = I18n.t('button.reset_password') %>
+      <% end %>
+      <%#= link_to 'Edit', edit_administration_path(user.id), class: 'card-link' %>
+      <% if user != current_user %>
+        <%= link_to administration_path(user.id), method: :delete, data: { confirm: I18n.t('message.notice.confirmation') }, class: 'card-link' do %> <%= icon('trash', class: "text-danger") %><% end %>
+        <%= link_to pdf_button, administration_path(user.id, :format => 'pdf'), class: 'card-link' %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
 
 <% content_for :javascript do %>
   function filter_names() {
