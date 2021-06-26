@@ -16,6 +16,7 @@ class DocumentsController < ApplicationController
   end
 
   def list
+    @delete = true
     @user = User.find(params[:id])
     @documents = @user.documents
   end
