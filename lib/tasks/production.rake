@@ -48,7 +48,7 @@ namespace :production do
     admin_pw = ENV['PASSWORD']
 
     User.create! first_name: 'Admin', last_name: 'User', birth: Date.today,
-                 username: 'admin', role: Role.find_by_name 'admin',
+                 username: 'admin', role: Role.find_by_name('admin'),
                  password: admin_pw, password_confirmation: admin_pw,
                  email: "admin@localhost.de"
   end
