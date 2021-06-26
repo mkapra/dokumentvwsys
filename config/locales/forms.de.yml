@@ -10,6 +10,7 @@ de:
     logout: "Ausloggen"
     reset_password: "Zugangsdaten neu generieren"
     save: "Speichern"
+    search_documents: "Dokumente suchen"
   label:
     birth: "Geburtsdatum"
     delete_at: "Verfügbar bis"

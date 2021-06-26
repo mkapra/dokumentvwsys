@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   end
 
   get 'documents/all', to: 'documents#all'
+  get 'documents/list/:id', to: 'documents#list', as: 'documents_list'
   resources :documents
 
   devise_for :users, controllers: {

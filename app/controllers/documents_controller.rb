@@ -6,13 +6,18 @@ class DocumentsController < ApplicationController
 
   before_action :authenticate_user!
   before_action :set_document, only: %i[show edit update destroy]
-  before_action :verify_admin_user, only: 'all'
+  before_action :verify_admin_user, only: %i[all list]
 
   add_flash_types :errors
 
   def all
     @delete = true
     @documents = Document.all.order('user_id desc')
+  end
+
+  def list
+    @user = User.find(params[:id])
+    @documents = @user.documents
   end
 
   def index

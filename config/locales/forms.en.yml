@@ -10,6 +10,7 @@ en:
     logout: "Log Out"
     reset_password: "Create new password"
     save: "Save"
+    search_documents: "Search for documents"
   label:
     birth: "Birth date"
     delete_at: "Available until"
