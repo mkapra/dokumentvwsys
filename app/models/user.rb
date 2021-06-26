@@ -3,7 +3,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :validatable
 
   belongs_to :role
-  has_many :documents
+  has_many :documents, dependent: :destroy
 
   def full_name
     "#{first_name} #{last_name}"
