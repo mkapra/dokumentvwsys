@@ -14,6 +14,12 @@
 <%= render 'layouts/navbar' %>
 
 <div class="container mt-2">
+  <% unless Preference.find_by_key('message').value.empty? %>
+    <div class="alert alert-info" role="alert">
+      <%= Preference.find_by_key 'message' %>
+    </div>
+  <% end %>
+
   <% if content_for?(:title) %>
     <h1><%= yield :title %></h1>
   <% end %>
