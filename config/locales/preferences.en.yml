@@ -1,11 +1,12 @@
 en:
   preferences:
     description:
-      image: "Image that is userd for login and PDFs"
-      title: "Name of the application"
       footer: "Text that is displayed in the lower left area of the website"
+      image: "Image that is userd for login and PDFs"
       imprint: "Imprint of your website"
+      message: "Message to be displayed on the main page"
       privacy_policy: "Privacy Policy of your website"
+      title: "Name of the application"
     group:
       appearance: "Appearance"
       basic: "Basic configuration"
