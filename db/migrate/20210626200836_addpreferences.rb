@@ -17,7 +17,7 @@ class Addpreferences < ActiveRecord::Migration[6.1]
     end
 
     unless Preference.find_by_key 'image'
-      Preference.create! key: 'image', is_file: true, group: 'basic'
+      Preference.create! key: 'image', is_file: true, group: 'appearance'
     end
 
     unless Preference.find_by_key 'footer'
