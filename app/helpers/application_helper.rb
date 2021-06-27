@@ -24,4 +24,8 @@ module ApplicationHelper
   def inline_help(help_text, object_name, method)
     content_tag :small, help_text, class: 'form-text', id: "#{object_name}_#{method}_inline"
   end
+
+  def get_logo
+    return 'data:image/png;base64,' + Base64.encode64(Preference.find_by_key('image').file)
+  end
 end

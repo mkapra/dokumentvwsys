@@ -5,29 +5,27 @@
     <%= wicked_pdf_stylesheet_link_tag 'application' %>
   </head>
   <body>
-    <div id="content">
+    <div id="container">
+      <img style="float: right" class="img-fluid" src="<%= get_logo %>" alt="<%= Preference.find_by_key 'title' %>">
+
       <p>
         Für:<br>
         <b><%= "#{@user.first_name} #{@user.last_name}" %></b>
       </p><br><br>
 
-      <h2>Zugangsdaten für das Portal <%= Preference.where(key: 'url').first %></h2><br><br>
-      <p>Dies sind Ihre Zugangsdaten für das Portal:</p><br>
+      <h2>Zugangsdaten für das Portal <%= Preference.where(key: 'title').first %></h2><br><br>
+      <p><%= Preference.find_by_key('pdf_message') %></p>
 
-      <table style="width: 80%">
-        <tr>
-          <th><%= t('label.username') %></th>
-          <th><%= @user.username %></th>
-        </tr>
-        <tr>
-          <th><%= t('label.password') %></th>
-          <th><%= password %></th>
-        </tr>
-        <tr>
-          <th><%= t('label.url') %></th>
-          <th><%= Preference.where(key: 'url').first %></th>
-        </tr>
-      </table>
+      <div class="card text-dark bg-light mb-3">
+        <div class="card-header">Zugangsdaten</div>
+        <div class="card-body">
+          <p class="card-text">
+            <b><%= t('label.username') %></b>: <%= @user.username %> <br>
+            <b><%= t('label.password') %></b>: <%= password %> <br>
+            <b><%= t('label.url') %></b>: <%= Preference.find_by_key 'url' %>
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

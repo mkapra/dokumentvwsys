@@ -5,7 +5,7 @@ preference_title:
 
 preference_url:
   key: "url"
-  value: ""
+  value: "http://localhost:3000"
   group: "basic"
 
 preference_image:
@@ -36,3 +36,10 @@ message:
   key: "message"
   value: "This is a test instance"
   group: "appearance"
+  is_textarea: true
+
+pdf_message:
+  key: "pdf_message"
+  value: "Dies sind die Zugangsdaten, um die für Sie zur Verfügung gestellten Dokumente abrufen zu können."
+  group: "appearance"
+  is_textarea: true

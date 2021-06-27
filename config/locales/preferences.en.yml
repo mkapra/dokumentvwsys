@@ -5,6 +5,7 @@ en:
       image: "Image that is userd for login and PDFs"
       imprint: "Imprint of your website"
       message: "Message to be displayed on the main page"
+      pdf_message: "Message to be placed above the access data in the access data PDF"
       privacy_policy: "Privacy Policy of your website"
       title: "Name of the application"
     group:

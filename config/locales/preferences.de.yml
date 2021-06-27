@@ -5,6 +5,7 @@ de:
       image: "Bild das für die Login Seite und das PDF benutzt wird"
       imprint: "Impressum der Website"
       message: "Nachricht, die auf der Hauptseite angezeigt werden soll"
+      pdf_message: "Nachricht, die über den Zugangsdaten im Zugangsdaten-PDF stehen soll"
       privacy_policy: "Datenschutzerklärung der Website"
       title: "Name der Applikation"
       url: "Basis Domain für die Homepage"

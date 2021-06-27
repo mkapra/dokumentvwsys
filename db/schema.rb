@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_26_200836) do
+ActiveRecord::Schema.define(version: 2021_06_27_151657) do
 
   create_table "documents", force: :cascade do |t|
     t.binary "pdf", null: false
