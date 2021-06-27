@@ -10,16 +10,20 @@
       <ul class="navbar-nav">
         <%= navbar_item 'startpage', root_path %>
 
-        <% if current_user.admin? %>
+        <% if current_user.admin? || current_user.uploader? %>
           <li class="nav-item dropdown">
             <%= link_to t('navbar.administration'), '#', class: 'nav-link dropdown-toggle', id: 'navbarDropdownMenuLink', role: 'button', data: {'bs-toggle': 'dropdown'}, aria: {expanded: false}%>
 
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <%= navbar_dropdown_item 'overview', administration_index_path %>
-              <%= navbar_dropdown_item 'new_user', new_administration_path %>
+              <% if current_user.admin? %>
+                <%= navbar_dropdown_item 'overview', administration_index_path %>
+                <%= navbar_dropdown_item 'new_user', new_administration_path %>
+              <% end %>
               <div class="dropdown-divider"></div>
               <%= navbar_dropdown_item 'new_document', new_document_path %>
-              <%= navbar_dropdown_item 'all_documents', documents_all_path %>
+              <% if current_user.admin? %>
+                <%= navbar_dropdown_item 'all_documents', documents_all_path %>
+              <% end %>
             </ul>
           </li>
         <% end %>

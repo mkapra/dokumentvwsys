@@ -13,6 +13,10 @@ class User < ApplicationRecord
     role.admin?
   end
 
+  def uploader?
+    role.uploader?
+  end
+
   def birthdate_string
     birth.strftime('%d.%m.%Y')
   end
