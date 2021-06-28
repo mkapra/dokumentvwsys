@@ -29,7 +29,7 @@
 
 <%= render 'layouts/footer' %>
 
-<% if flash.any? %>
+<% if flash.any? && current_user.present? %>
   <script type="text/javascript">
       <% flash.each do |key, value| %>
       <% type = key.to_s.gsub('alert', 'error').gsub('notice', 'success') %>
