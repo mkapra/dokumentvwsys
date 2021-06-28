@@ -20,4 +20,11 @@
 
     <%= f.submit t('button.login'), class: "btn btn-primary btn-lg btn-block mt-3" %>
   <% end %>
+
+  <div class="text-center p-3 mt-3">
+    © <%= Time.current.year %> Copyright:
+    <a class="text-dark" href="https://maximilian.kapra.de">Maximilian Kapra</a> |
+    <%= link_to I18n.t('headings.imprint'), legal_imprint_path, class: 'text-dark' %> |
+    <%= link_to I18n.t('headings.privacy_policy'), legal_privacy_policy_path, class: 'text-dark' %>
+  </div>
 </div>
