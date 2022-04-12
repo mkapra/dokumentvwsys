@@ -111,7 +111,8 @@ GEM
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     i18n_yaml_sorter (0.2.0)
-    jbuilder (2.11.2)
+    jbuilder (2.11.5)
+      actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -125,7 +126,7 @@ GEM
     method_source (1.0.0)
     mini_mime (1.0.3)
     mini_portile2 (2.8.0)
-    minitest (5.14.4)
+    minitest (5.15.0)
     msgpack (1.5.1)
     net-scp (3.0.0)
       net-ssh (>= 2.6.5, < 7.0.0)
@@ -239,7 +240,7 @@ GEM
     wkhtmltopdf-binary (0.12.6.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.4.2)
+    zeitwerk (2.5.4)
 
 PLATFORMS
   ruby
@@ -255,7 +256,7 @@ DEPENDENCIES
   devise
   devise-i18n
   i18n_yaml_sorter
-  jbuilder (~> 2.7)
+  jbuilder (~> 2.11)
   listen (~> 3.5)
   pg
   puma (~> 5.6)
