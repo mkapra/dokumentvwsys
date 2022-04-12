@@ -14,7 +14,7 @@
     "rails-ujs": "^5.2.6",
     "toastr": "^2.1.4",
     "turbolinks": "^5.2.0",
-    "webpack": "4",
+    "webpack": "5",
     "webpack-cli": "^4.7.2"
   },
   "version": "0.1.0",
