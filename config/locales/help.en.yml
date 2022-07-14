@@ -1,5 +1,0 @@
-en:
-  help:
-    generate_username: |
-      A user name is generated using the first and last name. When saving the user, this name must be must be unique.
-      If it is not, an error message is issued.

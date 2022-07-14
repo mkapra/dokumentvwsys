@@ -1,9 +1,0 @@
-en:
-  role:
-    admin: "Administrator"
-    description:
-      admin: "May create/edit/delete users and upload/delete documents"
-      uploader: "May upload and delete documents"
-      user: "May download documents. This is the default value"
-    uploader: "Uploader"
-    user: "User"

@@ -1,8 +1,0 @@
-role_admin:
-  name: "admin"
-
-role_uploader:
-  name: "uploader"
-
-role_user:
-  name: "user"

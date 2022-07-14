@@ -1,8 +1,0 @@
-en:
-  documents:
-    actions:
-      download: "Download"
-    fields:
-      delete_at: "Available until"
-      heading: "Documents for"
-      uploaded_at: "Uploaded at"

@@ -1,5 +1,0 @@
-en:
-  error:
-    empty_file: "The data field must not be empty!"
-    not_a_png: "Only PNG files allowed for upload!"
-    save_settings: "Error while saving settings!"

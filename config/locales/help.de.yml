@@ -1,5 +1,0 @@
-de:
-  help:
-    generate_username: |
-      Ein Benutzername wird mit Hilfe des Vor- und Nachnamens generiert. Beim Speichern des Benutzers muss dieser Name
-      eindeutig sein. Falls er dies nicht ist, wird eine Fehlermeldung ausgegeben.
