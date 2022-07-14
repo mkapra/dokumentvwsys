@@ -1,3 +1,5 @@
+use dcmntvwsyslib::users::User;
+
 fn main() {
-    println!("Hello, world!");
+    println!("{}", User::generate_random_password());
 }
