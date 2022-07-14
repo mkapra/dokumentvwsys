@@ -27,7 +27,7 @@ impl Into<i32> for UserRole {
     }
 }
 
-#[derive(Queryable)]
+#[derive(Debug, Queryable)]
 pub struct User {
     pub id: i32,
     pub username: String,
@@ -143,11 +143,12 @@ impl User {
 
         match verified {
             true => Ok(user),
-            false => Err(anyhow!("Incorrect username or password"))
+            false => Err(anyhow!("Incorrect username or password")),
         }
     }
 
     fn hash_password(password: &str) -> Result<String> {
-        bcrypt::hash(password, HASH_COST).map_err(|e| Error::from(e).context("Unable to hash the password"))
+        bcrypt::hash(password, HASH_COST)
+            .map_err(|e| Error::from(e).context("Unable to hash the password"))
     }
 }

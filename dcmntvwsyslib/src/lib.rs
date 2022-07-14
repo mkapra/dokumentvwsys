@@ -5,6 +5,7 @@ use diesel::pg::PgConnection;
 use diesel::prelude::*;
 use diesel::r2d2::{ConnectionManager, PooledConnection};
 
+pub mod database;
 mod schema;
 pub mod users;
 
