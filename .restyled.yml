@@ -1,4 +1,0 @@
----
-
-exclude:
-  - src/dokumentvwsys/db/schema.rb
