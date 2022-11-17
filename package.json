@@ -15,7 +15,7 @@
     "toastr": "^2.1.4",
     "turbolinks": "^5.2.0",
     "webpack": "5",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^5.0.0"
   },
   "version": "0.1.0",
   "devDependencies": {
